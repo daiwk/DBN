@@ -1,0 +1,560 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ANNEALING	Configuration.h	/^        static const bool ANNEALING = true;$/;"	m	namespace:Config::RBM
+ANNEALING_RATE	Configuration.h	/^        static const double ANNEALING_RATE = 3.;$/;"	m	namespace:Config::RBM
+BATCH_SIZE	Configuration.h	/^        static const int BATCH_SIZE = 100;$/;"	m	namespace:Config::RBM
+CC	Makefile	/^CC = g++$/;"	m
+CD_STEPS	Configuration.h	/^        static const int CD_STEPS = 1;$/;"	m	namespace:Config::RBM
+CFLAGS	Makefile	/^CFLAGS = -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops $/;"	m
+CLASS_DUMB1	Model.h	/^const int CLASS_DUMB1 = 1;$/;"	v
+CLASS_DUMB2	Model.h	/^const int CLASS_DUMB2 = 2;$/;"	v
+CLASS_DUMB3	Model.h	/^const int CLASS_DUMB3 = 3;$/;"	v
+CLASS_ENSEMBLE	Model.h	/^const int CLASS_ENSEMBLE = 0;$/;"	v
+CLASS_RBM	Model.h	/^const int CLASS_RBM = 4;$/;"	v
+CONDITIONAL	Configuration.h	/^        static const bool CONDITIONAL = true;$/;"	m	namespace:Config::RBM
+Config	Configuration.h	/^namespace Config {$/;"	n
+Config::Ensemble	Configuration.h	/^    namespace Ensemble {$/;"	n	namespace:Config
+Config::Ensemble::NB_MOVIES	Configuration.h	/^        static const int NB_MOVIES = Netflix::NB_MOVIES;$/;"	m	namespace:Config::Ensemble
+Config::Ensemble::NB_USERS	Configuration.h	/^        static const int NB_USERS = Netflix::NB_USERS;$/;"	m	namespace:Config::Ensemble
+Config::MapReduce	Configuration.h	/^    namespace MapReduce {$/;"	n	namespace:Config
+Config::MapReduce::ROUNDROBIN	Configuration.h	/^        static const bool ROUNDROBIN = false;$/;"	m	namespace:Config::MapReduce
+Config::Netflix	Configuration.h	/^    namespace Netflix {$/;"	n	namespace:Config
+Config::Netflix::NB_MOVIES	Configuration.h	/^        const int NB_MOVIES = 17770;$/;"	m	namespace:Config::Netflix
+Config::Netflix::NB_USERS	Configuration.h	/^        const int NB_USERS = 480189;$/;"	m	namespace:Config::Netflix
+Config::RBM	Configuration.h	/^    namespace RBM {$/;"	n	namespace:Config
+Config::RBM::ANNEALING	Configuration.h	/^        static const bool ANNEALING = true;$/;"	m	namespace:Config::RBM
+Config::RBM::ANNEALING_RATE	Configuration.h	/^        static const double ANNEALING_RATE = 3.;$/;"	m	namespace:Config::RBM
+Config::RBM::BATCH_SIZE	Configuration.h	/^        static const int BATCH_SIZE = 100;$/;"	m	namespace:Config::RBM
+Config::RBM::CD_STEPS	Configuration.h	/^        static const int CD_STEPS = 1;$/;"	m	namespace:Config::RBM
+Config::RBM::CONDITIONAL	Configuration.h	/^        static const bool CONDITIONAL = true;$/;"	m	namespace:Config::RBM
+Config::RBM::EPOCHS	Configuration.h	/^        static const int EPOCHS = 100;$/;"	m	namespace:Config::RBM
+Config::RBM::EPS_D	Configuration.h	/^        static const double EPS_D = 0.001;$/;"	m	namespace:Config::RBM
+Config::RBM::EPS_HB	Configuration.h	/^        static const double EPS_HB = 0.1;$/;"	m	namespace:Config::RBM
+Config::RBM::EPS_VB	Configuration.h	/^        static const double EPS_VB = 0.0012;$/;"	m	namespace:Config::RBM
+Config::RBM::EPS_W	Configuration.h	/^        static const double EPS_W = 0.0015;$/;"	m	namespace:Config::RBM
+Config::RBM::F	Configuration.h	/^        static const int F = 20;$/;"	m	namespace:Config::RBM
+Config::RBM::K	Configuration.h	/^        static const int K = 5;$/;"	m	namespace:Config::RBM
+Config::RBM::M	Configuration.h	/^        static const int M = Netflix::NB_MOVIES;$/;"	m	namespace:Config::RBM
+Config::RBM::MOMENTUM	Configuration.h	/^        static const double MOMENTUM = 0.9;$/;"	m	namespace:Config::RBM
+Config::RBM::N	Configuration.h	/^        static const int N = Netflix::NB_USERS;$/;"	m	namespace:Config::RBM
+Config::RBM::OPENMP	Configuration.h	/^        static const bool OPENMP = false;$/;"	m	namespace:Config::RBM
+Config::RBM::VERBOSE	Configuration.h	/^        static const bool VERBOSE = false;$/;"	m	namespace:Config::RBM
+Config::RBM::WEIGHT_COST	Configuration.h	/^        static const double WEIGHT_COST = 0.0001;$/;"	m	namespace:Config::RBM
+Config::Sets	Configuration.h	/^    namespace Sets {$/;"	n	namespace:Config
+Config::Sets::LS	Configuration.h	/^        static const string LS = "..\/..\/data\/bin\/LS.bin";$/;"	m	namespace:Config::Sets
+Config::Sets::QS	Configuration.h	/^        static const string QS = "..\/..\/data\/bin\/QS.bin";$/;"	m	namespace:Config::Sets
+Config::Sets::TS	Configuration.h	/^        static const string TS = "..\/..\/data\/bin\/TS.bin";$/;"	m	namespace:Config::Sets
+Config::Sets::VS	Configuration.h	/^        static const string VS = "..\/..\/data\/bin\/VS.bin";$/;"	m	namespace:Config::Sets
+Dataset	Dataset.cpp	/^Dataset::Dataset() :$/;"	f	class:Dataset	signature:()
+Dataset	Dataset.cpp	/^Dataset::Dataset(string filename) {$/;"	f	class:Dataset	signature:(string filename)
+Dataset	Dataset.h	/^    Dataset();$/;"	p	class:Dataset	access:public	signature:()
+Dataset	Dataset.h	/^    Dataset(string filename);$/;"	p	class:Dataset	access:public	signature:(string filename)
+Dataset	Dataset.h	/^class Dataset {$/;"	c
+Dataset::Dataset	Dataset.cpp	/^Dataset::Dataset() :$/;"	f	class:Dataset	signature:()
+Dataset::Dataset	Dataset.cpp	/^Dataset::Dataset(string filename) {$/;"	f	class:Dataset	signature:(string filename)
+Dataset::Dataset	Dataset.h	/^    Dataset();$/;"	p	class:Dataset	access:public	signature:()
+Dataset::Dataset	Dataset.h	/^    Dataset(string filename);$/;"	p	class:Dataset	access:public	signature:(string filename)
+Dataset::contains_movie	Dataset.cpp	/^bool Dataset::contains_movie(int m) {$/;"	f	class:Dataset	signature:(int m)
+Dataset::contains_movie	Dataset.h	/^    virtual bool contains_movie(int m);$/;"	p	class:Dataset	access:public	signature:(int m)
+Dataset::contains_user	Dataset.cpp	/^bool Dataset::contains_user(int u) {$/;"	f	class:Dataset	signature:(int u)
+Dataset::contains_user	Dataset.h	/^    virtual bool contains_user(int u);$/;"	p	class:Dataset	access:public	signature:(int u)
+Dataset::count	Dataset.h	/^    int* count;            \/\/ row ID -> number of ratings in that row$/;"	m	class:Dataset	access:public
+Dataset::ids	Dataset.h	/^    int* ids;              \/\/ Store the ids of non-missing elements in all rows$/;"	m	class:Dataset	access:public
+Dataset::index	Dataset.h	/^    int* index;            \/\/ row ID -> index of the first entry in ids$/;"	m	class:Dataset	access:public
+Dataset::movies	Dataset.h	/^    set<int> movies;       \/\/ movie IDs$/;"	m	class:Dataset	access:public
+Dataset::nb_columns	Dataset.h	/^    int nb_columns;        \/\/ Number of columns (at most)$/;"	m	class:Dataset	access:public
+Dataset::nb_ratings	Dataset.h	/^    int nb_ratings;        \/\/ Total number of non-missing ratings$/;"	m	class:Dataset	access:public
+Dataset::nb_rows	Dataset.h	/^    int nb_rows;           \/\/ Number of rows$/;"	m	class:Dataset	access:public
+Dataset::pick_movies	Dataset.cpp	/^Dataset* Dataset::pick_movies(set<int> sample) {$/;"	f	class:Dataset	signature:(set<int> sample)
+Dataset::pick_movies	Dataset.h	/^    virtual Dataset* pick_movies(set<int> sample);$/;"	p	class:Dataset	access:public	signature:(set<int> sample)
+Dataset::pick_users	Dataset.cpp	/^Dataset* Dataset::pick_users(set<int> sample) {$/;"	f	class:Dataset	signature:(set<int> sample)
+Dataset::pick_users	Dataset.h	/^    virtual Dataset* pick_users(set<int> sample);$/;"	p	class:Dataset	access:public	signature:(set<int> sample)
+Dataset::ratings	Dataset.h	/^    char* ratings;         \/\/ Store the corresponding ratings$/;"	m	class:Dataset	access:public
+Dataset::rows	Dataset.h	/^    map<int, int> rows;    \/\/ internal row ID -> user ID$/;"	m	class:Dataset	access:public
+Dataset::save	Dataset.cpp	/^void Dataset::save(string filename) {$/;"	f	class:Dataset	signature:(string filename)
+Dataset::save	Dataset.h	/^    virtual void save(string filename);$/;"	p	class:Dataset	access:public	signature:(string filename)
+Dataset::split_ratings	Dataset.cpp	/^void Dataset::split_ratings(Dataset* s1, Dataset* s2, double p) {$/;"	f	class:Dataset	signature:(Dataset* s1, Dataset* s2, double p)
+Dataset::split_ratings	Dataset.h	/^    virtual void split_ratings(Dataset* s1, Dataset* s2, double p);$/;"	p	class:Dataset	access:public	signature:(Dataset* s1, Dataset* s2, double p)
+Dataset::users	Dataset.h	/^    map<int, int> users;   \/\/ user ID -> internal row ID$/;"	m	class:Dataset	access:public
+Dataset::~Dataset	Dataset.cpp	/^Dataset::~Dataset() {$/;"	f	class:Dataset	signature:()
+Dataset::~Dataset	Dataset.h	/^    virtual ~Dataset();$/;"	p	class:Dataset	access:public	signature:()
+Dumb1	Dumb.cpp	/^Dumb1::Dumb1() :$/;"	f	class:Dumb1	signature:()
+Dumb1	Dumb.cpp	/^Dumb1::Dumb1(string filename) : Model(CLASS_DUMB1) {$/;"	f	class:Dumb1	signature:(string filename)
+Dumb1	Dumb.h	/^    Dumb1();$/;"	p	class:Dumb1	access:public	signature:()
+Dumb1	Dumb.h	/^    Dumb1(string filename);$/;"	p	class:Dumb1	access:public	signature:(string filename)
+Dumb1	Dumb.h	/^class Dumb1 : public Model {$/;"	c	inherits:Model
+Dumb1::Dumb1	Dumb.cpp	/^Dumb1::Dumb1() :$/;"	f	class:Dumb1	signature:()
+Dumb1::Dumb1	Dumb.cpp	/^Dumb1::Dumb1(string filename) : Model(CLASS_DUMB1) {$/;"	f	class:Dumb1	signature:(string filename)
+Dumb1::Dumb1	Dumb.h	/^    Dumb1();$/;"	p	class:Dumb1	access:public	signature:()
+Dumb1::Dumb1	Dumb.h	/^    Dumb1(string filename);$/;"	p	class:Dumb1	access:public	signature:(string filename)
+Dumb1::mean	Dumb.h	/^    double mean;$/;"	m	class:Dumb1	access:public
+Dumb1::predict	Dumb.cpp	/^double Dumb1::predict(int user, int movie) {$/;"	f	class:Dumb1	signature:(int user, int movie)
+Dumb1::predict	Dumb.h	/^    virtual double predict(int user, int movie);$/;"	p	class:Dumb1	access:public	signature:(int user, int movie)
+Dumb1::save	Dumb.cpp	/^void Dumb1::save(string filename) {$/;"	f	class:Dumb1	signature:(string filename)
+Dumb1::save	Dumb.h	/^    virtual void save(string filename);$/;"	p	class:Dumb1	access:public	signature:(string filename)
+Dumb1::test	Dumb.cpp	/^double Dumb1::test(string dataset) {$/;"	f	class:Dumb1	signature:(string dataset)
+Dumb1::test	Dumb.h	/^    virtual double test(string dataset="TS");$/;"	p	class:Dumb1	access:public	signature:(string dataset=Ó)
+Dumb1::toString	Dumb.cpp	/^string Dumb1::toString() {$/;"	f	class:Dumb1	signature:()
+Dumb1::toString	Dumb.h	/^    virtual string toString();$/;"	p	class:Dumb1	access:public	signature:()
+Dumb1::train	Dumb.cpp	/^void Dumb1::train(string dataset, bool reset) {$/;"	f	class:Dumb1	signature:(string dataset, bool reset)
+Dumb1::train	Dumb.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:Dumb1	access:public	signature:(string dataset=Ó, bool reset=true)
+Dumb1::~Dumb1	Dumb.cpp	/^Dumb1::~Dumb1() {$/;"	f	class:Dumb1	signature:()
+Dumb1::~Dumb1	Dumb.h	/^    virtual ~Dumb1();$/;"	p	class:Dumb1	access:public	signature:()
+Dumb2	Dumb.cpp	/^Dumb2::Dumb2() :$/;"	f	class:Dumb2	signature:()
+Dumb2	Dumb.cpp	/^Dumb2::Dumb2(string filename) : Model(CLASS_DUMB2) {$/;"	f	class:Dumb2	signature:(string filename)
+Dumb2	Dumb.h	/^    Dumb2();$/;"	p	class:Dumb2	access:public	signature:()
+Dumb2	Dumb.h	/^    Dumb2(string filename);$/;"	p	class:Dumb2	access:public	signature:(string filename)
+Dumb2	Dumb.h	/^class Dumb2 : public Model {$/;"	c	inherits:Model
+Dumb2::Dumb2	Dumb.cpp	/^Dumb2::Dumb2() :$/;"	f	class:Dumb2	signature:()
+Dumb2::Dumb2	Dumb.cpp	/^Dumb2::Dumb2(string filename) : Model(CLASS_DUMB2) {$/;"	f	class:Dumb2	signature:(string filename)
+Dumb2::Dumb2	Dumb.h	/^    Dumb2();$/;"	p	class:Dumb2	access:public	signature:()
+Dumb2::Dumb2	Dumb.h	/^    Dumb2(string filename);$/;"	p	class:Dumb2	access:public	signature:(string filename)
+Dumb2::means	Dumb.h	/^    double* means;$/;"	m	class:Dumb2	access:public
+Dumb2::predict	Dumb.cpp	/^double Dumb2::predict(int user, int movie) {$/;"	f	class:Dumb2	signature:(int user, int movie)
+Dumb2::predict	Dumb.h	/^    virtual double predict(int user, int movie);$/;"	p	class:Dumb2	access:public	signature:(int user, int movie)
+Dumb2::save	Dumb.cpp	/^void Dumb2::save(string filename) {$/;"	f	class:Dumb2	signature:(string filename)
+Dumb2::save	Dumb.h	/^    virtual void save(string filename);$/;"	p	class:Dumb2	access:public	signature:(string filename)
+Dumb2::test	Dumb.cpp	/^double Dumb2::test(string dataset) {$/;"	f	class:Dumb2	signature:(string dataset)
+Dumb2::test	Dumb.h	/^    virtual double test(string dataset="TS");$/;"	p	class:Dumb2	access:public	signature:(string dataset=Ó)
+Dumb2::toString	Dumb.cpp	/^string Dumb2::toString() {$/;"	f	class:Dumb2	signature:()
+Dumb2::toString	Dumb.h	/^    virtual string toString();$/;"	p	class:Dumb2	access:public	signature:()
+Dumb2::train	Dumb.cpp	/^void Dumb2::train(string dataset, bool reset) {$/;"	f	class:Dumb2	signature:(string dataset, bool reset)
+Dumb2::train	Dumb.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:Dumb2	access:public	signature:(string dataset=Ó, bool reset=true)
+Dumb2::~Dumb2	Dumb.cpp	/^Dumb2::~Dumb2() {$/;"	f	class:Dumb2	signature:()
+Dumb2::~Dumb2	Dumb.h	/^    virtual ~Dumb2();$/;"	p	class:Dumb2	access:public	signature:()
+Dumb3	Dumb.cpp	/^Dumb3::Dumb3() :$/;"	f	class:Dumb3	signature:()
+Dumb3	Dumb.cpp	/^Dumb3::Dumb3(string filename) : Model(CLASS_DUMB3) {$/;"	f	class:Dumb3	signature:(string filename)
+Dumb3	Dumb.h	/^    Dumb3();$/;"	p	class:Dumb3	access:public	signature:()
+Dumb3	Dumb.h	/^    Dumb3(string filename);$/;"	p	class:Dumb3	access:public	signature:(string filename)
+Dumb3	Dumb.h	/^class Dumb3 : public Model {$/;"	c	inherits:Model
+Dumb3::Dumb3	Dumb.cpp	/^Dumb3::Dumb3() :$/;"	f	class:Dumb3	signature:()
+Dumb3::Dumb3	Dumb.cpp	/^Dumb3::Dumb3(string filename) : Model(CLASS_DUMB3) {$/;"	f	class:Dumb3	signature:(string filename)
+Dumb3::Dumb3	Dumb.h	/^    Dumb3();$/;"	p	class:Dumb3	access:public	signature:()
+Dumb3::Dumb3	Dumb.h	/^    Dumb3(string filename);$/;"	p	class:Dumb3	access:public	signature:(string filename)
+Dumb3::means	Dumb.h	/^    double* means;$/;"	m	class:Dumb3	access:public
+Dumb3::predict	Dumb.cpp	/^double Dumb3::predict(int user, int movie) {$/;"	f	class:Dumb3	signature:(int user, int movie)
+Dumb3::predict	Dumb.h	/^    virtual double predict(int user, int movie);$/;"	p	class:Dumb3	access:public	signature:(int user, int movie)
+Dumb3::save	Dumb.cpp	/^void Dumb3::save(string filename) {$/;"	f	class:Dumb3	signature:(string filename)
+Dumb3::save	Dumb.h	/^    virtual void save(string filename);$/;"	p	class:Dumb3	access:public	signature:(string filename)
+Dumb3::test	Dumb.cpp	/^double Dumb3::test(string dataset) {$/;"	f	class:Dumb3	signature:(string dataset)
+Dumb3::test	Dumb.h	/^    virtual double test(string dataset="TS");$/;"	p	class:Dumb3	access:public	signature:(string dataset=Ó)
+Dumb3::toString	Dumb.cpp	/^string Dumb3::toString() {$/;"	f	class:Dumb3	signature:()
+Dumb3::toString	Dumb.h	/^    virtual string toString();$/;"	p	class:Dumb3	access:public	signature:()
+Dumb3::train	Dumb.cpp	/^void Dumb3::train(string dataset, bool reset) {$/;"	f	class:Dumb3	signature:(string dataset, bool reset)
+Dumb3::train	Dumb.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:Dumb3	access:public	signature:(string dataset=Ó, bool reset=true)
+Dumb3::~Dumb3	Dumb.cpp	/^Dumb3::~Dumb3() {$/;"	f	class:Dumb3	signature:()
+Dumb3::~Dumb3	Dumb.h	/^    virtual ~Dumb3();$/;"	p	class:Dumb3	access:public	signature:()
+EPOCHS	Configuration.h	/^        static const int EPOCHS = 100;$/;"	m	namespace:Config::RBM
+EPS_D	Configuration.h	/^        static const double EPS_D = 0.001;$/;"	m	namespace:Config::RBM
+EPS_HB	Configuration.h	/^        static const double EPS_HB = 0.1;$/;"	m	namespace:Config::RBM
+EPS_VB	Configuration.h	/^        static const double EPS_VB = 0.0012;$/;"	m	namespace:Config::RBM
+EPS_W	Configuration.h	/^        static const double EPS_W = 0.0015;$/;"	m	namespace:Config::RBM
+EXEC	Makefile	/^EXEC = RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics$/;"	m
+Ensemble	Configuration.h	/^    namespace Ensemble {$/;"	n	namespace:Config
+Ensemble	Ensemble.cpp	/^Ensemble::Ensemble() : Model(CLASS_ENSEMBLE) {$/;"	f	class:Ensemble	signature:()
+Ensemble	Ensemble.cpp	/^Ensemble::Ensemble(string filename) : Model(CLASS_ENSEMBLE) {$/;"	f	class:Ensemble	signature:(string filename)
+Ensemble	Ensemble.h	/^    Ensemble();$/;"	p	class:Ensemble	access:public	signature:()
+Ensemble	Ensemble.h	/^    Ensemble(string filename);$/;"	p	class:Ensemble	access:public	signature:(string filename)
+Ensemble	Ensemble.h	/^class Ensemble : public Model {$/;"	c	inherits:Model
+Ensemble::Ensemble	Ensemble.cpp	/^Ensemble::Ensemble() : Model(CLASS_ENSEMBLE) {$/;"	f	class:Ensemble	signature:()
+Ensemble::Ensemble	Ensemble.cpp	/^Ensemble::Ensemble(string filename) : Model(CLASS_ENSEMBLE) {$/;"	f	class:Ensemble	signature:(string filename)
+Ensemble::Ensemble	Ensemble.h	/^    Ensemble();$/;"	p	class:Ensemble	access:public	signature:()
+Ensemble::Ensemble	Ensemble.h	/^    Ensemble(string filename);$/;"	p	class:Ensemble	access:public	signature:(string filename)
+Ensemble::addModel	Ensemble.cpp	/^void Ensemble::addModel(Model* model) {$/;"	f	class:Ensemble	signature:(Model* model)
+Ensemble::addModel	Ensemble.h	/^    virtual void addModel(Model* model);$/;"	p	class:Ensemble	access:public	signature:(Model* model)
+Ensemble::addSet	Ensemble.cpp	/^void Ensemble::addSet(string key, Dataset* dataset) {$/;"	f	class:Ensemble	signature:(string key, Dataset* dataset)
+Ensemble::addSet	Ensemble.h	/^    virtual void addSet(string key, Dataset* set);$/;"	p	class:Ensemble	access:public	signature:(string key, Dataset* set)
+Ensemble::models	Ensemble.h	/^    set<Model*> models;$/;"	m	class:Ensemble	access:public
+Ensemble::predict	Ensemble.cpp	/^double Ensemble::predict(int user, int movie) {$/;"	f	class:Ensemble	signature:(int user, int movie)
+Ensemble::predict	Ensemble.h	/^    virtual double predict(int user, int movie);$/;"	p	class:Ensemble	access:public	signature:(int user, int movie)
+Ensemble::removeModel	Ensemble.cpp	/^void Ensemble::removeModel(Model* model) {$/;"	f	class:Ensemble	signature:(Model* model)
+Ensemble::removeModel	Ensemble.h	/^    virtual void removeModel(Model* model);$/;"	p	class:Ensemble	access:public	signature:(Model* model)
+Ensemble::removeSet	Ensemble.cpp	/^void Ensemble::removeSet(string key) {$/;"	f	class:Ensemble	signature:(string key)
+Ensemble::removeSet	Ensemble.h	/^    virtual void removeSet(string key);$/;"	p	class:Ensemble	access:public	signature:(string key)
+Ensemble::save	Ensemble.cpp	/^void Ensemble::save(string filename) {$/;"	f	class:Ensemble	signature:(string filename)
+Ensemble::save	Ensemble.h	/^    virtual void save(string filename);$/;"	p	class:Ensemble	access:public	signature:(string filename)
+Ensemble::test	Ensemble.cpp	/^double Ensemble::test(string dataset) {$/;"	f	class:Ensemble	signature:(string dataset)
+Ensemble::test	Ensemble.h	/^    virtual double test(string dataset="TS");$/;"	p	class:Ensemble	access:public	signature:(string dataset=Ó)
+Ensemble::toString	Ensemble.cpp	/^string Ensemble::toString() {$/;"	f	class:Ensemble	signature:()
+Ensemble::toString	Ensemble.h	/^    virtual string toString();$/;"	p	class:Ensemble	access:public	signature:()
+Ensemble::train	Ensemble.cpp	/^void Ensemble::train(string dataset, bool reset) {$/;"	f	class:Ensemble	signature:(string dataset, bool reset)
+Ensemble::train	Ensemble.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:Ensemble	access:public	signature:(string dataset=Ó, bool reset=true)
+Ensemble::~Ensemble	Ensemble.cpp	/^Ensemble::~Ensemble() {$/;"	f	class:Ensemble	signature:()
+Ensemble::~Ensemble	Ensemble.h	/^    virtual ~Ensemble();$/;"	p	class:Ensemble	access:public	signature:()
+F	Configuration.h	/^        static const int F = 20;$/;"	m	namespace:Config::RBM
+F	RBM.h	/^    int F;$/;"	m	class:RBM	access:public
+K	Configuration.h	/^        static const int K = 5;$/;"	m	namespace:Config::RBM
+K	RBM.h	/^    int K;$/;"	m	class:RBM	access:public
+LDFLAGS	Makefile	/^LDFLAGS = -lboost_program_options-mt -fopenmp $/;"	m
+LS	Configuration.h	/^        static const string LS = "..\/..\/data\/bin\/LS.bin";$/;"	m	namespace:Config::Sets
+M	Configuration.h	/^        static const int M = Netflix::NB_MOVIES;$/;"	m	namespace:Config::RBM
+M	RBM.h	/^    int M;$/;"	m	class:RBM	access:public
+MOMENTUM	Configuration.h	/^        static const double MOMENTUM = 0.9;$/;"	m	namespace:Config::RBM
+MapReduce	Configuration.h	/^    namespace MapReduce {$/;"	n	namespace:Config
+Model	Model.cpp	/^Model::Model(int id) : __id(id) {$/;"	f	class:Model	signature:(int id)
+Model	Model.h	/^    Model(int id);$/;"	p	class:Model	access:public	signature:(int id)
+Model	Model.h	/^class Model {$/;"	c
+Model::Model	Model.cpp	/^Model::Model(int id) : __id(id) {$/;"	f	class:Model	signature:(int id)
+Model::Model	Model.h	/^    Model(int id);$/;"	p	class:Model	access:public	signature:(int id)
+Model::__id	Model.h	/^    int __id;$/;"	m	class:Model	access:public
+Model::addSet	Model.cpp	/^void Model::addSet(string key, Dataset* dataset) {$/;"	f	class:Model	signature:(string key, Dataset* dataset)
+Model::addSet	Model.h	/^    virtual void addSet(string key, Dataset* dataset);$/;"	p	class:Model	access:public	signature:(string key, Dataset* dataset)
+Model::getParameter	Model.cpp	/^void* Model::getParameter(string key) {$/;"	f	class:Model	signature:(string key)
+Model::getParameter	Model.h	/^    virtual void* getParameter(string key);$/;"	p	class:Model	access:public	signature:(string key)
+Model::load	Model.cpp	/^Model* Model::load(string filename) {$/;"	f	class:Model	signature:(string filename)
+Model::load	Model.h	/^    static Model* load(string filename);$/;"	p	class:Model	access:public	signature:(string filename)
+Model::parameters	Model.h	/^    map<string, void*> parameters;$/;"	m	class:Model	access:public
+Model::predict	Model.h	/^    virtual double predict(int user, int movie) = 0;$/;"	p	class:Model	access:public	signature:(int user, int movie)
+Model::removeSet	Model.cpp	/^void Model::removeSet(string key) {$/;"	f	class:Model	signature:(string key)
+Model::removeSet	Model.h	/^    virtual void removeSet(string key);$/;"	p	class:Model	access:public	signature:(string key)
+Model::save	Model.h	/^    virtual void save(string filename) = 0;$/;"	p	class:Model	access:public	signature:(string filename)
+Model::setParameter	Model.cpp	/^void Model::setParameter(string key, const void* value, size_t size) {$/;"	f	class:Model	signature:(string key, const void* value, size_t size)
+Model::setParameter	Model.h	/^    virtual void setParameter(string key, const void* value, size_t size);$/;"	p	class:Model	access:public	signature:(string key, const void* value, size_t size)
+Model::sets	Model.h	/^    map<string, Dataset*> sets;$/;"	m	class:Model	access:public
+Model::test	Model.h	/^    virtual double test(string dataset="TS") = 0;$/;"	p	class:Model	access:public	signature:(string dataset=Ó)
+Model::toString	Model.h	/^    virtual string toString() = 0;$/;"	p	class:Model	access:public	signature:()
+Model::train	Model.h	/^    virtual void train(string dataset="LS", bool reset=true) = 0;$/;"	p	class:Model	access:public	signature:(string dataset=Ó, bool reset=true)
+Model::~Model	Model.cpp	/^Model::~Model() {$/;"	f	class:Model	signature:()
+Model::~Model	Model.h	/^    virtual ~Model();$/;"	p	class:Model	access:public	signature:()
+N	Configuration.h	/^        static const int N = Netflix::NB_USERS;$/;"	m	namespace:Config::RBM
+N	RBM.h	/^    int N;$/;"	m	class:RBM	access:public
+NB_MOVIES	Configuration.h	/^        const int NB_MOVIES = 17770;$/;"	m	namespace:Config::Netflix
+NB_MOVIES	Configuration.h	/^        static const int NB_MOVIES = Netflix::NB_MOVIES;$/;"	m	namespace:Config::Ensemble
+NB_USERS	Configuration.h	/^        const int NB_USERS = 480189;$/;"	m	namespace:Config::Netflix
+NB_USERS	Configuration.h	/^        static const int NB_USERS = Netflix::NB_USERS;$/;"	m	namespace:Config::Ensemble
+Netflix	Configuration.h	/^    namespace Netflix {$/;"	n	namespace:Config
+OBJECTS	Makefile	/^OBJECTS = Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o$/;"	m
+OPENMP	Configuration.h	/^        static const bool OPENMP = false;$/;"	m	namespace:Config::RBM
+QS	Configuration.h	/^        static const string QS = "..\/..\/data\/bin\/QS.bin";$/;"	m	namespace:Config::Sets
+RBM	Configuration.h	/^    namespace RBM {$/;"	n	namespace:Config
+RBM	RBM.cpp	/^RBM::RBM() : Model(CLASS_RBM) {$/;"	f	class:RBM	signature:()
+RBM	RBM.cpp	/^RBM::RBM(string filename) : Model(CLASS_RBM) {$/;"	f	class:RBM	signature:(string filename)
+RBM	RBM.h	/^    RBM();$/;"	p	class:RBM	access:public	signature:()
+RBM	RBM.h	/^    RBM(string filename);$/;"	p	class:RBM	access:public	signature:(string filename)
+RBM	RBM.h	/^class RBM : public Model {$/;"	c	inherits:Model
+RBM::F	RBM.h	/^    int F;$/;"	m	class:RBM	access:public
+RBM::K	RBM.h	/^    int K;$/;"	m	class:RBM	access:public
+RBM::M	RBM.h	/^    int M;$/;"	m	class:RBM	access:public
+RBM::N	RBM.h	/^    int N;$/;"	m	class:RBM	access:public
+RBM::RBM	RBM.cpp	/^RBM::RBM() : Model(CLASS_RBM) {$/;"	f	class:RBM	signature:()
+RBM::RBM	RBM.cpp	/^RBM::RBM(string filename) : Model(CLASS_RBM) {$/;"	f	class:RBM	signature:(string filename)
+RBM::RBM	RBM.h	/^    RBM();$/;"	p	class:RBM	access:public	signature:()
+RBM::RBM	RBM.h	/^    RBM(string filename);$/;"	p	class:RBM	access:public	signature:(string filename)
+RBM::conditional	RBM.h	/^    bool conditional;$/;"	m	class:RBM	access:public
+RBM::d	RBM.h	/^    double* d;                \/\/ D matrix$/;"	m	class:RBM	access:public
+RBM::d_inc	RBM.h	/^    double* d_inc;            \/\/ D matrix inc$/;"	m	class:RBM	access:public
+RBM::hb	RBM.h	/^    double* hb;               \/\/ Biases of hidden units$/;"	m	class:RBM	access:public
+RBM::hb_inc	RBM.h	/^    double* hb_inc;           \/\/ Biases inc of hidden units$/;"	m	class:RBM	access:public
+RBM::predict	RBM.cpp	/^double RBM::predict(int user, int movie) {$/;"	f	class:RBM	signature:(int user, int movie)
+RBM::predict	RBM.h	/^    virtual double predict(int user, int movie);$/;"	p	class:RBM	access:public	signature:(int user, int movie)
+RBM::reset	RBM.cpp	/^void RBM::reset(void) {$/;"	f	class:RBM	signature:(void)
+RBM::reset	RBM.h	/^    virtual void reset(void);$/;"	p	class:RBM	access:public	signature:(void)
+RBM::sample_hidden	RBM.cpp	/^void RBM::sample_hidden(double* hp, double* hs) {$/;"	f	class:RBM	signature:(double* hp, double* hs)
+RBM::sample_hidden	RBM.h	/^    virtual void sample_hidden(double* hp, double* hs);$/;"	p	class:RBM	access:public	signature:(double* hp, double* hs)
+RBM::sample_visible	RBM.cpp	/^void RBM::sample_visible(double* vp, double* vs, int* mask, int mask_size) {$/;"	f	class:RBM	signature:(double* vp, double* vs, int* mask, int mask_size)
+RBM::sample_visible	RBM.h	/^    virtual void sample_visible(double* vs, double* vp, int* mask, int mask_size);$/;"	p	class:RBM	access:public	signature:(double* vs, double* vp, int* mask, int mask_size)
+RBM::save	RBM.cpp	/^void RBM::save(string filename) {$/;"	f	class:RBM	signature:(string filename)
+RBM::save	RBM.h	/^    virtual void save(string filename);$/;"	p	class:RBM	access:public	signature:(string filename)
+RBM::test	RBM.cpp	/^double RBM::test(string dataset) {$/;"	f	class:RBM	signature:(string dataset)
+RBM::test	RBM.h	/^    virtual double test(string dataset="TS");$/;"	p	class:RBM	access:public	signature:(string dataset=Ó)
+RBM::toString	RBM.cpp	/^string RBM::toString() {$/;"	f	class:RBM	signature:()
+RBM::toString	RBM.h	/^    virtual string toString();$/;"	p	class:RBM	access:public	signature:()
+RBM::train	RBM.cpp	/^void RBM::train(string dataset, bool reset) {$/;"	f	class:RBM	signature:(string dataset, bool reset)
+RBM::train	RBM.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:RBM	access:public	signature:(string dataset=Ó, bool reset=true)
+RBM::update_d	RBM.cpp	/^void RBM::update_d(double* d_acc, bool* watched, int nth) {$/;"	f	class:RBM	signature:(double* d_acc, bool* watched, int nth)
+RBM::update_d	RBM.h	/^    virtual void update_d(double* d_acc, bool* watched, int nth);$/;"	p	class:RBM	access:public	signature:(double* d_acc, bool* watched, int nth)
+RBM::update_hb	RBM.cpp	/^void RBM::update_hb(double* hb_acc, int nth) {$/;"	f	class:RBM	signature:(double* hb_acc, int nth)
+RBM::update_hb	RBM.h	/^    virtual void update_hb(double* hb_acc, int nth);$/;"	p	class:RBM	access:public	signature:(double* hb_acc, int nth)
+RBM::update_hidden	RBM.cpp	/^void RBM::update_hidden(double* vs, int* mask, int mask_size, double* hp) {$/;"	f	class:RBM	signature:(double* vs, int* mask, int mask_size, double* hp)
+RBM::update_hidden	RBM.cpp	/^void RBM::update_hidden(double* vs, int* mask, int mask_size, int* seen, int seen_size, double* hp) {$/;"	f	class:RBM	signature:(double* vs, int* mask, int mask_size, int* seen, int seen_size, double* hp)
+RBM::update_hidden	RBM.h	/^    virtual void update_hidden(double* vs, int* mask, int mask_size, double* hp);$/;"	p	class:RBM	access:public	signature:(double* vs, int* mask, int mask_size, double* hp)
+RBM::update_hidden	RBM.h	/^    virtual void update_hidden(double* vs, int* mask, int mask_size, int* seen, int seen_size, double* hp);$/;"	p	class:RBM	access:public	signature:(double* vs, int* mask, int mask_size, int* seen, int seen_size, double* hp)
+RBM::update_vb	RBM.cpp	/^void RBM::update_vb(double* vb_acc, int* vb_count, int nth) {$/;"	f	class:RBM	signature:(double* vb_acc, int* vb_count, int nth)
+RBM::update_vb	RBM.h	/^    virtual void update_vb(double* vb_acc, int* vb_count, int nth);$/;"	p	class:RBM	access:public	signature:(double* vb_acc, int* vb_count, int nth)
+RBM::update_visible	RBM.cpp	/^void RBM::update_visible(double* hs, double* vp, int* mask, int mask_size) {$/;"	f	class:RBM	signature:(double* hs, double* vp, int* mask, int mask_size)
+RBM::update_visible	RBM.h	/^    virtual void update_visible(double* hs, double* vp, int* mask, int mask_size);$/;"	p	class:RBM	access:public	signature:(double* hs, double* vp, int* mask, int mask_size)
+RBM::update_w	RBM.cpp	/^void RBM::update_w(double* w_acc, int* w_count, int nth) {$/;"	f	class:RBM	signature:(double* w_acc, int* w_count, int nth)
+RBM::update_w	RBM.h	/^    virtual void update_w(double* w_acc, int* w_count, int nth);$/;"	p	class:RBM	access:public	signature:(double* w_acc, int* w_count, int nth)
+RBM::validate	RBM.cpp	/^double RBM::validate(string dataset) {$/;"	f	class:RBM	signature:(string dataset)
+RBM::validate	RBM.h	/^    virtual double validate(string dataset="VS");$/;"	p	class:RBM	access:public	signature:(string dataset=Ó)
+RBM::vb	RBM.h	/^    double* vb;               \/\/ Biases of visible units$/;"	m	class:RBM	access:public
+RBM::vb_inc	RBM.h	/^    double* vb_inc;           \/\/ Biases inc of visible units$/;"	m	class:RBM	access:public
+RBM::w	RBM.h	/^    double* w;                \/\/ Weights$/;"	m	class:RBM	access:public
+RBM::w_inc	RBM.h	/^    double* w_inc;            \/\/ Weights inc$/;"	m	class:RBM	access:public
+RBM::~RBM	RBM.cpp	/^RBM::~RBM() {$/;"	f	class:RBM	signature:()
+RBM::~RBM	RBM.h	/^    virtual ~RBM();$/;"	p	class:RBM	access:public	signature:()
+RBMMapReduce	RBMMapReduce.cpp	/^RBMMapReduce::RBMMapReduce(int rank, int np) :$/;"	f	class:RBMMapReduce	signature:(int rank, int np)
+RBMMapReduce	RBMMapReduce.cpp	/^RBMMapReduce::RBMMapReduce(int rank, int np, string filename) :$/;"	f	class:RBMMapReduce	signature:(int rank, int np, string filename)
+RBMMapReduce	RBMMapReduce.h	/^    RBMMapReduce(int rank, int np);$/;"	p	class:RBMMapReduce	access:public	signature:(int rank, int np)
+RBMMapReduce	RBMMapReduce.h	/^    RBMMapReduce(int rank, int np, string filename);$/;"	p	class:RBMMapReduce	access:public	signature:(int rank, int np, string filename)
+RBMMapReduce	RBMMapReduce.h	/^class RBMMapReduce : public RBM {$/;"	c	inherits:RBM
+RBMMapReduce::RBMMapReduce	RBMMapReduce.cpp	/^RBMMapReduce::RBMMapReduce(int rank, int np) :$/;"	f	class:RBMMapReduce	signature:(int rank, int np)
+RBMMapReduce::RBMMapReduce	RBMMapReduce.cpp	/^RBMMapReduce::RBMMapReduce(int rank, int np, string filename) :$/;"	f	class:RBMMapReduce	signature:(int rank, int np, string filename)
+RBMMapReduce::RBMMapReduce	RBMMapReduce.h	/^    RBMMapReduce(int rank, int np);$/;"	p	class:RBMMapReduce	access:public	signature:(int rank, int np)
+RBMMapReduce::RBMMapReduce	RBMMapReduce.h	/^    RBMMapReduce(int rank, int np, string filename);$/;"	p	class:RBMMapReduce	access:public	signature:(int rank, int np, string filename)
+RBMMapReduce::__test_count	RBMMapReduce.h	/^    int __test_count;$/;"	m	class:RBMMapReduce	access:public
+RBMMapReduce::__test_dataset	RBMMapReduce.h	/^    string __test_dataset;$/;"	m	class:RBMMapReduce	access:public
+RBMMapReduce::__test_total	RBMMapReduce.h	/^    double __test_total;$/;"	m	class:RBMMapReduce	access:public
+RBMMapReduce::__train_dataset	RBMMapReduce.h	/^    string __train_dataset;$/;"	m	class:RBMMapReduce	access:public
+RBMMapReduce::__train_epoch	RBMMapReduce.h	/^    int __train_epoch;$/;"	m	class:RBMMapReduce	access:public
+RBMMapReduce::__train_keys	RBMMapReduce.h	/^    map<int, pair<char, int> > __train_keys;$/;"	m	class:RBMMapReduce	access:public
+RBMMapReduce::np	RBMMapReduce.h	/^    int np;$/;"	m	class:RBMMapReduce	access:public
+RBMMapReduce::rank	RBMMapReduce.h	/^    int rank;$/;"	m	class:RBMMapReduce	access:public
+RBMMapReduce::test	RBMMapReduce.cpp	/^double RBMMapReduce::test(string dataset) {$/;"	f	class:RBMMapReduce	signature:(string dataset)
+RBMMapReduce::test	RBMMapReduce.h	/^    virtual double test(string dataset="TS");$/;"	p	class:RBMMapReduce	access:public	signature:(string dataset=Ó)
+RBMMapReduce::toString	RBMMapReduce.cpp	/^string RBMMapReduce::toString() {$/;"	f	class:RBMMapReduce	signature:()
+RBMMapReduce::toString	RBMMapReduce.h	/^    virtual string toString();$/;"	p	class:RBMMapReduce	access:public	signature:()
+RBMMapReduce::train	RBMMapReduce.cpp	/^void RBMMapReduce::train(string dataset, bool reset) {$/;"	f	class:RBMMapReduce	signature:(string dataset, bool reset)
+RBMMapReduce::train	RBMMapReduce.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:RBMMapReduce	access:public	signature:(string dataset=Ó, bool reset=true)
+RBMMapReduce::~RBMMapReduce	RBMMapReduce.cpp	/^RBMMapReduce::~RBMMapReduce() {$/;"	f	class:RBMMapReduce	signature:()
+RBMMapReduce::~RBMMapReduce	RBMMapReduce.h	/^    virtual ~RBMMapReduce();$/;"	p	class:RBMMapReduce	access:public	signature:()
+RBMOpenMP	RBMOpenMP.cpp	/^RBMOpenMP::RBMOpenMP() : RBM() {$/;"	f	class:RBMOpenMP	signature:()
+RBMOpenMP	RBMOpenMP.cpp	/^RBMOpenMP::RBMOpenMP(string filename) : RBM(filename) {$/;"	f	class:RBMOpenMP	signature:(string filename)
+RBMOpenMP	RBMOpenMP.h	/^    RBMOpenMP();$/;"	p	class:RBMOpenMP	access:public	signature:()
+RBMOpenMP	RBMOpenMP.h	/^    RBMOpenMP(string filename);$/;"	p	class:RBMOpenMP	access:public	signature:(string filename)
+RBMOpenMP	RBMOpenMP.h	/^class RBMOpenMP : public RBM {$/;"	c	inherits:RBM
+RBMOpenMP::RBMOpenMP	RBMOpenMP.cpp	/^RBMOpenMP::RBMOpenMP() : RBM() {$/;"	f	class:RBMOpenMP	signature:()
+RBMOpenMP::RBMOpenMP	RBMOpenMP.cpp	/^RBMOpenMP::RBMOpenMP(string filename) : RBM(filename) {$/;"	f	class:RBMOpenMP	signature:(string filename)
+RBMOpenMP::RBMOpenMP	RBMOpenMP.h	/^    RBMOpenMP();$/;"	p	class:RBMOpenMP	access:public	signature:()
+RBMOpenMP::RBMOpenMP	RBMOpenMP.h	/^    RBMOpenMP(string filename);$/;"	p	class:RBMOpenMP	access:public	signature:(string filename)
+RBMOpenMP::test	RBMOpenMP.cpp	/^double RBMOpenMP::test(string dataset) {$/;"	f	class:RBMOpenMP	signature:(string dataset)
+RBMOpenMP::test	RBMOpenMP.h	/^    virtual double test(string dataset="TS");$/;"	p	class:RBMOpenMP	access:public	signature:(string dataset=Ó)
+RBMOpenMP::toString	RBMOpenMP.cpp	/^string RBMOpenMP::toString() {$/;"	f	class:RBMOpenMP	signature:()
+RBMOpenMP::toString	RBMOpenMP.h	/^    virtual string toString();$/;"	p	class:RBMOpenMP	access:public	signature:()
+RBMOpenMP::train	RBMOpenMP.cpp	/^void RBMOpenMP::train(string dataset, bool reset) {$/;"	f	class:RBMOpenMP	signature:(string dataset, bool reset)
+RBMOpenMP::train	RBMOpenMP.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:RBMOpenMP	access:public	signature:(string dataset=Ó, bool reset=true)
+RBMOpenMP::~RBMOpenMP	RBMOpenMP.cpp	/^RBMOpenMP::~RBMOpenMP() {$/;"	f	class:RBMOpenMP	signature:()
+RBMOpenMP::~RBMOpenMP	RBMOpenMP.h	/^    virtual ~RBMOpenMP();$/;"	p	class:RBMOpenMP	access:public	signature:()
+ROUNDROBIN	Configuration.h	/^        static const bool ROUNDROBIN = false;$/;"	m	namespace:Config::MapReduce
+Sets	Configuration.h	/^    namespace Sets {$/;"	n	namespace:Config
+TS	Configuration.h	/^        static const string TS = "..\/..\/data\/bin\/TS.bin";$/;"	m	namespace:Config::Sets
+VERBOSE	Configuration.h	/^        static const bool VERBOSE = false;$/;"	m	namespace:Config::RBM
+VS	Configuration.h	/^        static const string VS = "..\/..\/data\/bin\/VS.bin";$/;"	m	namespace:Config::Sets
+WEIGHT_COST	Configuration.h	/^        static const double WEIGHT_COST = 0.0001;$/;"	m	namespace:Config::RBM
+_CONFIGURATION_H_	Configuration.h	11;"	d
+_DATASET_H_	Dataset.h	11;"	d
+_DUMB_H_	Dumb.h	11;"	d
+_ENSEMBLE_H_	Ensemble.h	11;"	d
+_MISC_H_	Misc.h	11;"	d
+_MODEL_H_	Model.h	11;"	d
+_RBM_H_	RBM.h	15;"	d
+_RBM_MAPREDUCE_H_	RBMMapReduce.h	11;"	d
+_RBM_OPENMP_H_	RBMOpenMP.h	11;"	d
+__id	Model.h	/^    int __id;$/;"	m	class:Model	access:public
+__test_count	RBMMapReduce.h	/^    int __test_count;$/;"	m	class:RBMMapReduce	access:public
+__test_dataset	RBMMapReduce.h	/^    string __test_dataset;$/;"	m	class:RBMMapReduce	access:public
+__test_total	RBMMapReduce.h	/^    double __test_total;$/;"	m	class:RBMMapReduce	access:public
+__train_dataset	RBMMapReduce.h	/^    string __train_dataset;$/;"	m	class:RBMMapReduce	access:public
+__train_epoch	RBMMapReduce.h	/^    int __train_epoch;$/;"	m	class:RBMMapReduce	access:public
+__train_keys	RBMMapReduce.h	/^    map<int, pair<char, int> > __train_keys;$/;"	m	class:RBMMapReduce	access:public
+_ij	RBM.cpp	33;"	d	file:
+_ij	RBMMapReduce.cpp	37;"	d	file:
+_ij	RBMOpenMP.cpp	33;"	d	file:
+_ik	RBM.cpp	32;"	d	file:
+_ik	RBMMapReduce.cpp	36;"	d	file:
+_ik	RBMOpenMP.cpp	32;"	d	file:
+_ikj	RBM.cpp	31;"	d	file:
+_ikj	RBMMapReduce.cpp	35;"	d	file:
+_ikj	RBMOpenMP.cpp	31;"	d	file:
+addModel	Ensemble.cpp	/^void Ensemble::addModel(Model* model) {$/;"	f	class:Ensemble	signature:(Model* model)
+addModel	Ensemble.h	/^    virtual void addModel(Model* model);$/;"	p	class:Ensemble	access:public	signature:(Model* model)
+addSet	Ensemble.cpp	/^void Ensemble::addSet(string key, Dataset* dataset) {$/;"	f	class:Ensemble	signature:(string key, Dataset* dataset)
+addSet	Ensemble.h	/^    virtual void addSet(string key, Dataset* set);$/;"	p	class:Ensemble	access:public	signature:(string key, Dataset* set)
+addSet	Model.cpp	/^void Model::addSet(string key, Dataset* dataset) {$/;"	f	class:Model	signature:(string key, Dataset* dataset)
+addSet	Model.h	/^    virtual void addSet(string key, Dataset* dataset);$/;"	p	class:Model	access:public	signature:(string key, Dataset* dataset)
+conditional	RBM.h	/^    bool conditional;$/;"	m	class:RBM	access:public
+contains_movie	Dataset.cpp	/^bool Dataset::contains_movie(int m) {$/;"	f	class:Dataset	signature:(int m)
+contains_movie	Dataset.h	/^    virtual bool contains_movie(int m);$/;"	p	class:Dataset	access:public	signature:(int m)
+contains_user	Dataset.cpp	/^bool Dataset::contains_user(int u) {$/;"	f	class:Dataset	signature:(int u)
+contains_user	Dataset.h	/^    virtual bool contains_user(int u);$/;"	p	class:Dataset	access:public	signature:(int u)
+count	Dataset.h	/^    int* count;            \/\/ row ID -> number of ratings in that row$/;"	m	class:Dataset	access:public
+d	RBM.h	/^    double* d;                \/\/ D matrix$/;"	m	class:RBM	access:public
+d_inc	RBM.h	/^    double* d_inc;            \/\/ D matrix inc$/;"	m	class:RBM	access:public
+gaussian	Misc.cpp	/^double gaussian(double mean, double stddev) {$/;"	f	signature:(double mean, double stddev)
+gaussian	Misc.h	/^double gaussian(double mean, double stddev);$/;"	p	signature:(double mean, double stddev)
+getParameter	Model.cpp	/^void* Model::getParameter(string key) {$/;"	f	class:Model	signature:(string key)
+getParameter	Model.h	/^    virtual void* getParameter(string key);$/;"	p	class:Model	access:public	signature:(string key)
+hb	RBM.h	/^    double* hb;               \/\/ Biases of hidden units$/;"	m	class:RBM	access:public
+hb_inc	RBM.h	/^    double* hb_inc;           \/\/ Biases inc of hidden units$/;"	m	class:RBM	access:public
+ids	Dataset.h	/^    int* ids;              \/\/ Store the ids of non-missing elements in all rows$/;"	m	class:Dataset	access:public
+index	Dataset.h	/^    int* index;            \/\/ row ID -> index of the first entry in ids$/;"	m	class:Dataset	access:public
+load	Model.cpp	/^Model* Model::load(string filename) {$/;"	f	class:Model	signature:(string filename)
+load	Model.h	/^    static Model* load(string filename);$/;"	p	class:Model	access:public	signature:(string filename)
+load_titles	Dataset.cpp	/^map<int, string> load_titles(string filename) {$/;"	f	signature:(string filename)
+load_titles	Dataset.h	/^map<int, string> load_titles(string filename);$/;"	p	signature:(string filename)
+main	Blending.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	BlendingMajority.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	MapReduce.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	RunDumb.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	RunEnsemble.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	RunFrontend.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	RunRBM.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	Statistics.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	test-dwk.cpp	/^int main(){$/;"	f	signature:()
+max	Misc.h	23;"	d
+mean	Dumb.h	/^    double mean;$/;"	m	class:Dumb1	access:public
+means	Dumb.h	/^    double* means;$/;"	m	class:Dumb2	access:public
+means	Dumb.h	/^    double* means;$/;"	m	class:Dumb3	access:public
+min	Misc.h	24;"	d
+models	Ensemble.h	/^    set<Model*> models;$/;"	m	class:Ensemble	access:public
+movies	Dataset.h	/^    set<int> movies;       \/\/ movie IDs$/;"	m	class:Dataset	access:public
+nb_columns	Dataset.h	/^    int nb_columns;        \/\/ Number of columns (at most)$/;"	m	class:Dataset	access:public
+nb_ratings	Dataset.h	/^    int nb_ratings;        \/\/ Total number of non-missing ratings$/;"	m	class:Dataset	access:public
+nb_rows	Dataset.h	/^    int nb_rows;           \/\/ Number of rows$/;"	m	class:Dataset	access:public
+noise	Misc.cpp	/^double noise(void) {$/;"	f	signature:(void)
+noise	Misc.h	/^double noise(void);$/;"	p	signature:(void)
+np	RBMMapReduce.h	/^    int np;$/;"	m	class:RBMMapReduce	access:public
+parameters	Model.h	/^    map<string, void*> parameters;$/;"	m	class:Model	access:public
+pick_movies	Dataset.cpp	/^Dataset* Dataset::pick_movies(set<int> sample) {$/;"	f	class:Dataset	signature:(set<int> sample)
+pick_movies	Dataset.h	/^    virtual Dataset* pick_movies(set<int> sample);$/;"	p	class:Dataset	access:public	signature:(set<int> sample)
+pick_users	Dataset.cpp	/^Dataset* Dataset::pick_users(set<int> sample) {$/;"	f	class:Dataset	signature:(set<int> sample)
+pick_users	Dataset.h	/^    virtual Dataset* pick_users(set<int> sample);$/;"	p	class:Dataset	access:public	signature:(set<int> sample)
+predict	Dumb.cpp	/^double Dumb1::predict(int user, int movie) {$/;"	f	class:Dumb1	signature:(int user, int movie)
+predict	Dumb.cpp	/^double Dumb2::predict(int user, int movie) {$/;"	f	class:Dumb2	signature:(int user, int movie)
+predict	Dumb.cpp	/^double Dumb3::predict(int user, int movie) {$/;"	f	class:Dumb3	signature:(int user, int movie)
+predict	Dumb.h	/^    virtual double predict(int user, int movie);$/;"	p	class:Dumb1	access:public	signature:(int user, int movie)
+predict	Dumb.h	/^    virtual double predict(int user, int movie);$/;"	p	class:Dumb2	access:public	signature:(int user, int movie)
+predict	Dumb.h	/^    virtual double predict(int user, int movie);$/;"	p	class:Dumb3	access:public	signature:(int user, int movie)
+predict	Ensemble.cpp	/^double Ensemble::predict(int user, int movie) {$/;"	f	class:Ensemble	signature:(int user, int movie)
+predict	Ensemble.h	/^    virtual double predict(int user, int movie);$/;"	p	class:Ensemble	access:public	signature:(int user, int movie)
+predict	Model.h	/^    virtual double predict(int user, int movie) = 0;$/;"	p	class:Model	access:public	signature:(int user, int movie)
+predict	RBM.cpp	/^double RBM::predict(int user, int movie) {$/;"	f	class:RBM	signature:(int user, int movie)
+predict	RBM.h	/^    virtual double predict(int user, int movie);$/;"	p	class:RBM	access:public	signature:(int user, int movie)
+random_movies	Dataset.cpp	/^set<int> random_movies(int nb) {$/;"	f	signature:(int nb)
+random_movies	Dataset.h	/^set<int> random_movies(int nb);$/;"	p	signature:(int nb)
+random_users	Dataset.cpp	/^set<int> random_users(int nb) {$/;"	f	signature:(int nb)
+random_users	Dataset.h	/^set<int> random_users(int nb);$/;"	p	signature:(int nb)
+rank	RBMMapReduce.h	/^    int rank;$/;"	m	class:RBMMapReduce	access:public
+ratings	Dataset.h	/^    char* ratings;         \/\/ Store the corresponding ratings$/;"	m	class:Dataset	access:public
+removeModel	Ensemble.cpp	/^void Ensemble::removeModel(Model* model) {$/;"	f	class:Ensemble	signature:(Model* model)
+removeModel	Ensemble.h	/^    virtual void removeModel(Model* model);$/;"	p	class:Ensemble	access:public	signature:(Model* model)
+removeSet	Ensemble.cpp	/^void Ensemble::removeSet(string key) {$/;"	f	class:Ensemble	signature:(string key)
+removeSet	Ensemble.h	/^    virtual void removeSet(string key);$/;"	p	class:Ensemble	access:public	signature:(string key)
+removeSet	Model.cpp	/^void Model::removeSet(string key) {$/;"	f	class:Model	signature:(string key)
+removeSet	Model.h	/^    virtual void removeSet(string key);$/;"	p	class:Model	access:public	signature:(string key)
+reset	RBM.cpp	/^void RBM::reset(void) {$/;"	f	class:RBM	signature:(void)
+reset	RBM.h	/^    virtual void reset(void);$/;"	p	class:RBM	access:public	signature:(void)
+rows	Dataset.h	/^    map<int, int> rows;    \/\/ internal row ID -> user ID$/;"	m	class:Dataset	access:public
+sample_hidden	RBM.cpp	/^void RBM::sample_hidden(double* hp, double* hs) {$/;"	f	class:RBM	signature:(double* hp, double* hs)
+sample_hidden	RBM.h	/^    virtual void sample_hidden(double* hp, double* hs);$/;"	p	class:RBM	access:public	signature:(double* hp, double* hs)
+sample_visible	RBM.cpp	/^void RBM::sample_visible(double* vp, double* vs, int* mask, int mask_size) {$/;"	f	class:RBM	signature:(double* vp, double* vs, int* mask, int mask_size)
+sample_visible	RBM.h	/^    virtual void sample_visible(double* vs, double* vp, int* mask, int mask_size);$/;"	p	class:RBM	access:public	signature:(double* vs, double* vp, int* mask, int mask_size)
+save	Dataset.cpp	/^void Dataset::save(string filename) {$/;"	f	class:Dataset	signature:(string filename)
+save	Dataset.h	/^    virtual void save(string filename);$/;"	p	class:Dataset	access:public	signature:(string filename)
+save	Dumb.cpp	/^void Dumb1::save(string filename) {$/;"	f	class:Dumb1	signature:(string filename)
+save	Dumb.cpp	/^void Dumb2::save(string filename) {$/;"	f	class:Dumb2	signature:(string filename)
+save	Dumb.cpp	/^void Dumb3::save(string filename) {$/;"	f	class:Dumb3	signature:(string filename)
+save	Dumb.h	/^    virtual void save(string filename);$/;"	p	class:Dumb1	access:public	signature:(string filename)
+save	Dumb.h	/^    virtual void save(string filename);$/;"	p	class:Dumb2	access:public	signature:(string filename)
+save	Dumb.h	/^    virtual void save(string filename);$/;"	p	class:Dumb3	access:public	signature:(string filename)
+save	Ensemble.cpp	/^void Ensemble::save(string filename) {$/;"	f	class:Ensemble	signature:(string filename)
+save	Ensemble.h	/^    virtual void save(string filename);$/;"	p	class:Ensemble	access:public	signature:(string filename)
+save	Model.h	/^    virtual void save(string filename) = 0;$/;"	p	class:Model	access:public	signature:(string filename)
+save	RBM.cpp	/^void RBM::save(string filename) {$/;"	f	class:RBM	signature:(string filename)
+save	RBM.h	/^    virtual void save(string filename);$/;"	p	class:RBM	access:public	signature:(string filename)
+setParameter	Model.cpp	/^void Model::setParameter(string key, const void* value, size_t size) {$/;"	f	class:Model	signature:(string key, const void* value, size_t size)
+setParameter	Model.h	/^    virtual void setParameter(string key, const void* value, size_t size);$/;"	p	class:Model	access:public	signature:(string key, const void* value, size_t size)
+sets	Model.h	/^    map<string, Dataset*> sets;$/;"	m	class:Model	access:public
+split_ratings	Dataset.cpp	/^void Dataset::split_ratings(Dataset* s1, Dataset* s2, double p) {$/;"	f	class:Dataset	signature:(Dataset* s1, Dataset* s2, double p)
+split_ratings	Dataset.h	/^    virtual void split_ratings(Dataset* s1, Dataset* s2, double p);$/;"	p	class:Dataset	access:public	signature:(Dataset* s1, Dataset* s2, double p)
+test	Dumb.cpp	/^double Dumb1::test(string dataset) {$/;"	f	class:Dumb1	signature:(string dataset)
+test	Dumb.cpp	/^double Dumb2::test(string dataset) {$/;"	f	class:Dumb2	signature:(string dataset)
+test	Dumb.cpp	/^double Dumb3::test(string dataset) {$/;"	f	class:Dumb3	signature:(string dataset)
+test	Dumb.h	/^    virtual double test(string dataset="TS");$/;"	p	class:Dumb1	access:public	signature:(string dataset=Ó)
+test	Dumb.h	/^    virtual double test(string dataset="TS");$/;"	p	class:Dumb2	access:public	signature:(string dataset=Ó)
+test	Dumb.h	/^    virtual double test(string dataset="TS");$/;"	p	class:Dumb3	access:public	signature:(string dataset=Ó)
+test	Ensemble.cpp	/^double Ensemble::test(string dataset) {$/;"	f	class:Ensemble	signature:(string dataset)
+test	Ensemble.h	/^    virtual double test(string dataset="TS");$/;"	p	class:Ensemble	access:public	signature:(string dataset=Ó)
+test	Model.h	/^    virtual double test(string dataset="TS") = 0;$/;"	p	class:Model	access:public	signature:(string dataset=Ó)
+test	RBM.cpp	/^double RBM::test(string dataset) {$/;"	f	class:RBM	signature:(string dataset)
+test	RBM.h	/^    virtual double test(string dataset="TS");$/;"	p	class:RBM	access:public	signature:(string dataset=Ó)
+test	RBMMapReduce.cpp	/^double RBMMapReduce::test(string dataset) {$/;"	f	class:RBMMapReduce	signature:(string dataset)
+test	RBMMapReduce.h	/^    virtual double test(string dataset="TS");$/;"	p	class:RBMMapReduce	access:public	signature:(string dataset=Ó)
+test	RBMOpenMP.cpp	/^double RBMOpenMP::test(string dataset) {$/;"	f	class:RBMOpenMP	signature:(string dataset)
+test	RBMOpenMP.h	/^    virtual double test(string dataset="TS");$/;"	p	class:RBMOpenMP	access:public	signature:(string dataset=Ó)
+test_map	RBMMapReduce.cpp	/^void test_map(int task, KeyValue* kv, void* ptr) {$/;"	f	signature:(int task, KeyValue* kv, void* ptr)
+test_map	RBMMapReduce.h	/^void test_map(int task, KeyValue* kv, void* ptr);$/;"	p	signature:(int task, KeyValue* kv, void* ptr)
+test_reduce	RBMMapReduce.cpp	/^void test_reduce(uint64_t i,$/;"	f	signature:(uint64_t i, char* key, int key_size, char* value, int value_size, KeyValue* kv, void* ptr)
+test_reduce	RBMMapReduce.h	/^void test_reduce(uint64_t i,$/;"	p	signature:(uint64_t i, char* key, int key_size, char* value, int value_size, KeyValue* kv, void* ptr)
+toString	Dumb.cpp	/^string Dumb1::toString() {$/;"	f	class:Dumb1	signature:()
+toString	Dumb.cpp	/^string Dumb2::toString() {$/;"	f	class:Dumb2	signature:()
+toString	Dumb.cpp	/^string Dumb3::toString() {$/;"	f	class:Dumb3	signature:()
+toString	Dumb.h	/^    virtual string toString();$/;"	p	class:Dumb1	access:public	signature:()
+toString	Dumb.h	/^    virtual string toString();$/;"	p	class:Dumb2	access:public	signature:()
+toString	Dumb.h	/^    virtual string toString();$/;"	p	class:Dumb3	access:public	signature:()
+toString	Ensemble.cpp	/^string Ensemble::toString() {$/;"	f	class:Ensemble	signature:()
+toString	Ensemble.h	/^    virtual string toString();$/;"	p	class:Ensemble	access:public	signature:()
+toString	Model.h	/^    virtual string toString() = 0;$/;"	p	class:Model	access:public	signature:()
+toString	RBM.cpp	/^string RBM::toString() {$/;"	f	class:RBM	signature:()
+toString	RBM.h	/^    virtual string toString();$/;"	p	class:RBM	access:public	signature:()
+toString	RBMMapReduce.cpp	/^string RBMMapReduce::toString() {$/;"	f	class:RBMMapReduce	signature:()
+toString	RBMMapReduce.h	/^    virtual string toString();$/;"	p	class:RBMMapReduce	access:public	signature:()
+toString	RBMOpenMP.cpp	/^string RBMOpenMP::toString() {$/;"	f	class:RBMOpenMP	signature:()
+toString	RBMOpenMP.h	/^    virtual string toString();$/;"	p	class:RBMOpenMP	access:public	signature:()
+train	Dumb.cpp	/^void Dumb1::train(string dataset, bool reset) {$/;"	f	class:Dumb1	signature:(string dataset, bool reset)
+train	Dumb.cpp	/^void Dumb2::train(string dataset, bool reset) {$/;"	f	class:Dumb2	signature:(string dataset, bool reset)
+train	Dumb.cpp	/^void Dumb3::train(string dataset, bool reset) {$/;"	f	class:Dumb3	signature:(string dataset, bool reset)
+train	Dumb.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:Dumb1	access:public	signature:(string dataset=Ó, bool reset=true)
+train	Dumb.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:Dumb2	access:public	signature:(string dataset=Ó, bool reset=true)
+train	Dumb.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:Dumb3	access:public	signature:(string dataset=Ó, bool reset=true)
+train	Ensemble.cpp	/^void Ensemble::train(string dataset, bool reset) {$/;"	f	class:Ensemble	signature:(string dataset, bool reset)
+train	Ensemble.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:Ensemble	access:public	signature:(string dataset=Ó, bool reset=true)
+train	Model.h	/^    virtual void train(string dataset="LS", bool reset=true) = 0;$/;"	p	class:Model	access:public	signature:(string dataset=Ó, bool reset=true)
+train	RBM.cpp	/^void RBM::train(string dataset, bool reset) {$/;"	f	class:RBM	signature:(string dataset, bool reset)
+train	RBM.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:RBM	access:public	signature:(string dataset=Ó, bool reset=true)
+train	RBMMapReduce.cpp	/^void RBMMapReduce::train(string dataset, bool reset) {$/;"	f	class:RBMMapReduce	signature:(string dataset, bool reset)
+train	RBMMapReduce.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:RBMMapReduce	access:public	signature:(string dataset=Ó, bool reset=true)
+train	RBMOpenMP.cpp	/^void RBMOpenMP::train(string dataset, bool reset) {$/;"	f	class:RBMOpenMP	signature:(string dataset, bool reset)
+train	RBMOpenMP.h	/^    virtual void train(string dataset="LS", bool reset=true);$/;"	p	class:RBMOpenMP	access:public	signature:(string dataset=Ó, bool reset=true)
+train_map	RBMMapReduce.cpp	/^void train_map(int task, KeyValue* kv, void* ptr) {$/;"	f	signature:(int task, KeyValue* kv, void* ptr)
+train_map	RBMMapReduce.h	/^void train_map(int task, KeyValue* kv, void* ptr);$/;"	p	signature:(int task, KeyValue* kv, void* ptr)
+train_reduce	RBMMapReduce.cpp	/^void train_reduce(char* key, int key_size,$/;"	f	signature:(char* key, int key_size, char* values, int nb_values, int* value_sizes, KeyValue* kv, void* ptr)
+train_reduce	RBMMapReduce.h	/^void train_reduce(char* key, int key_size,$/;"	p	signature:(char* key, int key_size, char* values, int nb_values, int* value_sizes, KeyValue* kv, void* ptr)
+train_update	RBMMapReduce.cpp	/^void train_update(uint64_t i,$/;"	f	signature:(uint64_t i, char* key, int key_size, char* value, int value_size, KeyValue* kv, void* ptr)
+train_update	RBMMapReduce.h	/^void train_update(uint64_t i,$/;"	p	signature:(uint64_t i, char* key, int key_size, char* value, int value_size, KeyValue* kv, void* ptr)
+uniform	Misc.cpp	/^double uniform(void) {$/;"	f	signature:(void)
+uniform	Misc.h	/^double uniform(void);$/;"	p	signature:(void)
+update_d	RBM.cpp	/^void RBM::update_d(double* d_acc, bool* watched, int nth) {$/;"	f	class:RBM	signature:(double* d_acc, bool* watched, int nth)
+update_d	RBM.h	/^    virtual void update_d(double* d_acc, bool* watched, int nth);$/;"	p	class:RBM	access:public	signature:(double* d_acc, bool* watched, int nth)
+update_hb	RBM.cpp	/^void RBM::update_hb(double* hb_acc, int nth) {$/;"	f	class:RBM	signature:(double* hb_acc, int nth)
+update_hb	RBM.h	/^    virtual void update_hb(double* hb_acc, int nth);$/;"	p	class:RBM	access:public	signature:(double* hb_acc, int nth)
+update_hidden	RBM.cpp	/^void RBM::update_hidden(double* vs, int* mask, int mask_size, double* hp) {$/;"	f	class:RBM	signature:(double* vs, int* mask, int mask_size, double* hp)
+update_hidden	RBM.cpp	/^void RBM::update_hidden(double* vs, int* mask, int mask_size, int* seen, int seen_size, double* hp) {$/;"	f	class:RBM	signature:(double* vs, int* mask, int mask_size, int* seen, int seen_size, double* hp)
+update_hidden	RBM.h	/^    virtual void update_hidden(double* vs, int* mask, int mask_size, double* hp);$/;"	p	class:RBM	access:public	signature:(double* vs, int* mask, int mask_size, double* hp)
+update_hidden	RBM.h	/^    virtual void update_hidden(double* vs, int* mask, int mask_size, int* seen, int seen_size, double* hp);$/;"	p	class:RBM	access:public	signature:(double* vs, int* mask, int mask_size, int* seen, int seen_size, double* hp)
+update_vb	RBM.cpp	/^void RBM::update_vb(double* vb_acc, int* vb_count, int nth) {$/;"	f	class:RBM	signature:(double* vb_acc, int* vb_count, int nth)
+update_vb	RBM.h	/^    virtual void update_vb(double* vb_acc, int* vb_count, int nth);$/;"	p	class:RBM	access:public	signature:(double* vb_acc, int* vb_count, int nth)
+update_visible	RBM.cpp	/^void RBM::update_visible(double* hs, double* vp, int* mask, int mask_size) {$/;"	f	class:RBM	signature:(double* hs, double* vp, int* mask, int mask_size)
+update_visible	RBM.h	/^    virtual void update_visible(double* hs, double* vp, int* mask, int mask_size);$/;"	p	class:RBM	access:public	signature:(double* hs, double* vp, int* mask, int mask_size)
+update_w	RBM.cpp	/^void RBM::update_w(double* w_acc, int* w_count, int nth) {$/;"	f	class:RBM	signature:(double* w_acc, int* w_count, int nth)
+update_w	RBM.h	/^    virtual void update_w(double* w_acc, int* w_count, int nth);$/;"	p	class:RBM	access:public	signature:(double* w_acc, int* w_count, int nth)
+users	Dataset.h	/^    map<int, int> users;   \/\/ user ID -> internal row ID$/;"	m	class:Dataset	access:public
+validate	RBM.cpp	/^double RBM::validate(string dataset) {$/;"	f	class:RBM	signature:(string dataset)
+validate	RBM.h	/^    virtual double validate(string dataset="VS");$/;"	p	class:RBM	access:public	signature:(string dataset=Ó)
+vb	RBM.h	/^    double* vb;               \/\/ Biases of visible units$/;"	m	class:RBM	access:public
+vb_inc	RBM.h	/^    double* vb_inc;           \/\/ Biases inc of visible units$/;"	m	class:RBM	access:public
+w	RBM.h	/^    double* w;                \/\/ Weights$/;"	m	class:RBM	access:public
+w_inc	RBM.h	/^    double* w_inc;            \/\/ Weights inc$/;"	m	class:RBM	access:public
+zero	Misc.h	/^template <typename T> void zero(T* array, int size) {$/;"	f	signature:(T* array, int size)
+~Dataset	Dataset.cpp	/^Dataset::~Dataset() {$/;"	f	class:Dataset	signature:()
+~Dataset	Dataset.h	/^    virtual ~Dataset();$/;"	p	class:Dataset	access:public	signature:()
+~Dumb1	Dumb.cpp	/^Dumb1::~Dumb1() {$/;"	f	class:Dumb1	signature:()
+~Dumb1	Dumb.h	/^    virtual ~Dumb1();$/;"	p	class:Dumb1	access:public	signature:()
+~Dumb2	Dumb.cpp	/^Dumb2::~Dumb2() {$/;"	f	class:Dumb2	signature:()
+~Dumb2	Dumb.h	/^    virtual ~Dumb2();$/;"	p	class:Dumb2	access:public	signature:()
+~Dumb3	Dumb.cpp	/^Dumb3::~Dumb3() {$/;"	f	class:Dumb3	signature:()
+~Dumb3	Dumb.h	/^    virtual ~Dumb3();$/;"	p	class:Dumb3	access:public	signature:()
+~Ensemble	Ensemble.cpp	/^Ensemble::~Ensemble() {$/;"	f	class:Ensemble	signature:()
+~Ensemble	Ensemble.h	/^    virtual ~Ensemble();$/;"	p	class:Ensemble	access:public	signature:()
+~Model	Model.cpp	/^Model::~Model() {$/;"	f	class:Model	signature:()
+~Model	Model.h	/^    virtual ~Model();$/;"	p	class:Model	access:public	signature:()
+~RBM	RBM.cpp	/^RBM::~RBM() {$/;"	f	class:RBM	signature:()
+~RBM	RBM.h	/^    virtual ~RBM();$/;"	p	class:RBM	access:public	signature:()
+~RBMMapReduce	RBMMapReduce.cpp	/^RBMMapReduce::~RBMMapReduce() {$/;"	f	class:RBMMapReduce	signature:()
+~RBMMapReduce	RBMMapReduce.h	/^    virtual ~RBMMapReduce();$/;"	p	class:RBMMapReduce	access:public	signature:()
+~RBMOpenMP	RBMOpenMP.cpp	/^RBMOpenMP::~RBMOpenMP() {$/;"	f	class:RBMOpenMP	signature:()
+~RBMOpenMP	RBMOpenMP.h	/^    virtual ~RBMOpenMP();$/;"	p	class:RBMOpenMP	access:public	signature:()

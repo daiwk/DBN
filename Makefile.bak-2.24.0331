@@ -1,0 +1,41 @@
+CC = g++
+CFLAGS = -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g 
+LDFLAGS = -lboost_program_options-mt -fopenmp -g
+OBJECTS = Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+EXEC = RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+
+all: $(EXEC)
+
+RunFrontend: RunFrontend.o $(OBJECTS) 
+	$(CC) $(LDFLAGS) -o $@ $^
+
+RunDumb: RunDumb.o $(OBJECTS)
+	$(CC) $(LDFLAGS) -o $@ $^
+
+RunRBM: RunRBM.o $(OBJECTS)
+	$(CC) $(LDFLAGS) -o $@ $^
+
+RunEnsemble: RunEnsemble.o $(OBJECTS)
+	$(CC) $(LDFLAGS) -o $@ $^
+
+Statistics: Statistics.o Dataset.o Misc.o
+	$(CC) $(LDFLAGS) -o $@ $^
+
+Blending: Blending.o Dataset.o Misc.o
+	$(CC) $(LDFLAGS) -o $@ $^
+
+BlendingMajority: BlendingMajority.o Dataset.o Misc.o
+	$(CC) $(LDFLAGS) -o $@ $^
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+.PHONY: clean edit rebuild
+
+clean:
+	rm -f *.o *~ $(EXEC)
+
+edit:
+	geany *.h *.cpp &
+
+rebuild: clean all

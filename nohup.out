@@ -1,0 +1,1772 @@
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:356: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+1: openmp; 0: rbm
+starting openmp 1 at:
+Fri Feb 21 16:29:19 CST 2014
+finished openmp 1 at:
+Fri Feb 21 20:27:19 CST 2014
+starting openmp 0 at:
+Fri Feb 21 20:27:19 CST 2014
+finished openmp 0 at:
+Sat Feb 22 07:41:03 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:356: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sat Feb 22 16:35:24 CST 2014
+finished openmp 1 at:
+Sat Feb 22 18:38:08 CST 2014
+starting openmp 0 at:
+Sat Feb 22 18:38:08 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:356: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 01:10:33 CST 2014
+RunRBM: RBMOpenMP.cpp:75: virtual void RBMOpenMP::train(std::string, bool): Assertion `LS->nb_rows == QS->nb_rows' failed.
+run_and_calc_time-full-dwk-free.sh: line 9: 18610 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum_dwk --openmp 1 --verbose 1 --log log/openmp_1_${date_str}.log-dwk-free > ${outdir}/openmp_1_res.txt-dwk-free
+finished openmp 1 at:
+Sun Feb 23 01:11:08 CST 2014
+starting openmp 0 at:
+Sun Feb 23 01:11:08 CST 2014
+RunRBM: RBM.cpp:232: virtual void RBM::train(std::string, bool): Assertion `LS->nb_rows == QS->nb_rows' failed.
+run_and_calc_time-full-dwk-free.sh: line 16: 18622 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum_dwk --openmp 0 --verbose 1 --log log/openmp_0_${date_str}.log-dwk-free > ${outdir}/openmp_0_res.txt-dwk-free
+finished openmp 0 at:
+Sun Feb 23 01:11:44 CST 2014
+finished openmp 0 at:
+Sun Feb 23 01:42:05 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:356: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running small-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 04:37:44 CST 2014
+run_and_calc_time-small-free.sh: line 10: 19842 Killed                  ./RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum --TS ../../data/bin/TS.bin.small-changeUserNum --QS ../../data/bin/TS.bin.small-changeUserNum --VS ../../data/bin/TS.bin.small-changeUserNum --openmp 1 --verbose 1 --log log/openmp_1_${date_str}.log-small-free > ${outdir}/openmp_1_res.txt-small-free
+finished openmp 1 at:
+Sun Feb 23 05:24:02 CST 2014
+starting openmp 0 at:
+Sun Feb 23 05:24:02 CST 2014
+finished openmp 0 at:
+Sun Feb 23 07:16:00 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:356: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running small-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 12:37:41 CST 2014
+run_and_calc_time-small-free-100.sh: line 10: 21411 Killed                  ./RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum --TS ../../data/bin/TS.bin.small-changeUserNum --QS ../../data/bin/TS.bin.small-changeUserNum --VS ../../data/bin/TS.bin.small-changeUserNum --F 100 --openmp 1 --verbose 1 --log log/openmp_1_${date_str}.log-small-free-100 > ${outdir}/openmp_1_res.txt-small-free-100
+finished openmp 1 at:
+Sun Feb 23 13:23:36 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:356: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running small-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 13:40:11 CST 2014
+run_and_calc_time-small-free-100.sh: line 10: 21828 Killed                  ./RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum --TS ../../data/bin/TS.bin.small-changeUserNum --QS ../../data/bin/TS.bin.small-changeUserNum --VS ../../data/bin/TS.bin.small-changeUserNum --F 100 --openmp 1 --verbose 1 --log log/openmp_1_${date_str}.log-small-free-100 > ${outdir}/openmp_1_res.txt-small-free-100
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:356: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running small-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 14:10:03 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual void RBMOpenMP::train(std::string, bool)’:
+RBMOpenMP.cpp:334: error: a function-definition is not allowed here before ‘{’ token
+RBMOpenMP.cpp:359: error: expected ‘}’ before end of line
+RBMOpenMP.cpp: At global scope:
+RBMOpenMP.cpp:359: error: expected declaration before end of line
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+make: *** [RBMOpenMP.o] Error 1
+make: *** Waiting for unfinished jobs....
+running small-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 14:34:04 CST 2014
+run_and_calc_time-small-free-100.sh: line 10: ./RunRBM: No such file or directory
+run_and_calc_time-small-free-100.sh: line 11: ./Statistics: No such file or directory
+finished openmp 1 at:
+Sun Feb 23 14:34:04 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:364: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running small-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 14:35:18 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:364: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running small-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 14:46:42 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:364: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running full-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 14:53:45 CST 2014
+finished openmp 1 at:
+Sun Feb 23 16:03:44 CST 2014
+run_and_calc_time-full-free-100.sh: line 10: 22536 Killed                  ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 100 --openmp 1 --verbose 1 --log log/openmp_1_${date_str}.log-full-free-100 > ${outdir}/openmp_1_res.txt-full-free-100
+finished openmp 1 at:
+Sun Feb 23 16:09:14 CST 2014
+starting openmp 0 at:
+Sun Feb 23 16:09:14 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:364: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running small-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 21:01:05 CST 2014
+finished openmp 1 at:
+Sun Feb 23 21:18:25 CST 2014
+starting openmp 0 at:
+Sun Feb 23 21:18:25 CST 2014
+finished openmp 0 at:
+Sun Feb 23 21:45:23 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:364: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running full-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 22:24:31 CST 2014
+index-run_and_calc_time-full-free.sh: line 10: 24384 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum-1 --TS ../../data/bin/TS.bin.fengge-changeUserNum-1 --QS ../../data/bin/TS.bin.fengge-changeUserNum-1 --VS ../../data/bin/TS.bin.fengge-changeUserNum-1 --openmp 1 --verbose 1 --log log/openmp_1_${date_str}.log-full-free > ${outdir}/openmp_1_res.txt-full-free
+finished openmp 1 at:
+Sun Feb 23 22:26:27 CST 2014
+starting openmp 0 at:
+Sun Feb 23 22:26:27 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+running full-free
+1: openmp; 0: rbm
+starting openmp 1 at:
+Sun Feb 23 22:30:58 CST 2014
+index-run_and_calc_time-full-free.sh: line 10: 24523 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum-1 --TS ../../data/bin/TS.bin.fengge-changeUserNum-1 --QS ../../data/bin/TS.bin.fengge-changeUserNum-1 --VS ../../data/bin/TS.bin.fengge-changeUserNum-1 --openmp 1 --verbose 1 --log log/openmp_1_${date_str}.log-full-free > ${outdir}/openmp_1_res.txt-full-free
+finished openmp 1 at:
+Sun Feb 23 22:31:38 CST 2014
+starting openmp 0 at:
+Sun Feb 23 22:31:38 CST 2014
+index-run_and_calc_time-full-free.sh: line 17: 24578 Killed                  ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum-1 --TS ../../data/bin/TS.bin.fengge-changeUserNum-1 --QS ../../data/bin/TS.bin.fengge-changeUserNum-1 --VS ../../data/bin/TS.bin.fengge-changeUserNum-1 --openmp 0 --verbose 1 --log log/openmp_0_${date_str}.log-full-free > ${outdir}/openmp_0_res.txt-full-free
+finished openmp 0 at:
+Sun Feb 23 22:31:58 CST 2014
+index-run_and_calc_time-full-free.sh: line 17: 24436 Killed                  ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum-1 --TS ../../data/bin/TS.bin.fengge-changeUserNum-1 --QS ../../data/bin/TS.bin.fengge-changeUserNum-1 --VS ../../data/bin/TS.bin.fengge-changeUserNum-1 --openmp 0 --verbose 1 --log log/openmp_0_${date_str}.log-full-free > ${outdir}/openmp_0_res.txt-full-free
+finished openmp 0 at:
+Sun Feb 23 22:32:08 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running full-free
+starting openmp 1 at:
+Sun Feb 23 23:53:17 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 > log_dir/1_log-openmp-full_20 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20
+run_all.sh: line 77: 25414 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20 > log_dir/1_log-openmp-full_20
+finished openmp 1 at:
+Sun Feb 23 23:53:58 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:358: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running full-free
+starting openmp 1 at:
+Sun Feb 23 23:57:13 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 > log_dir/1_log-openmp-full_20 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20
+run_all.sh: line 77: 25549 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20 > log_dir/1_log-openmp-full_20
+finished openmp 1 at:
+Sun Feb 23 23:59:06 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running full-free
+starting openmp 1 at:
+Mon Feb 24 00:01:14 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 > log_dir/1_log-openmp-full_20 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20
+run_all.sh: line 77: 25698 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20 > log_dir/1_log-openmp-full_20
+finished openmp 1 at:
+Mon Feb 24 00:04:21 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running full-free
+starting openmp 1 at:
+Mon Feb 24 00:08:38 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 > log_dir/1_log-openmp-full_20 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20
+run_all.sh: line 77: 25848 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20 > log_dir/1_log-openmp-full_20
+finished openmp 1 at:
+Mon Feb 24 00:13:39 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:361: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running full-free
+starting openmp 1 at:
+Mon Feb 24 00:17:15 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum --TS ../../data/bin/TS.bin.fengge-changeUserNum --QS ../../data/bin/TS.bin.fengge-changeUserNum --VS ../../data/bin/TS.bin.fengge-changeUserNum --F 20 --openmp 1 > log_dir/1_log-openmp-full_20 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:361: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running small
+starting openmp 1 at:
+Mon Feb 24 00:48:15 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 1 > log_dir/1_log-openmp-small_20 --verbose 1 --log rmse_dir/1_rmse-openmp-small_20
+finished openmp 1 at:
+Mon Feb 24 01:05:01 CST 2014
+running small
+starting openmp 0 at:
+Mon Feb 24 01:05:01 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 0 > log_dir/0_log-openmp-small_20 --verbose 1 --log rmse_dir/0_rmse-openmp-small_20
+finished openmp 1 at:
+Mon Feb 24 01:31:27 CST 2014
+running full-free
+starting openmp 1 at:
+Mon Feb 24 01:31:27 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum-1 --TS ../../data/bin/TS.bin.fengge-changeUserNum-1 --QS ../../data/bin/TS.bin.fengge-changeUserNum-1 --VS ../../data/bin/TS.bin.fengge-changeUserNum-1 --F 20 --openmp 1 > log_dir/1_log-openmp-full_20 --verbose 1 --log rmse_dir/1_rmse-openmp-full_20
+finished openmp 1 at:
+Mon Feb 24 03:32:33 CST 2014
+running full-free
+starting openmp 0 at:
+Mon Feb 24 03:32:33 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum-1 --TS ../../data/bin/TS.bin.fengge-changeUserNum-1 --QS ../../data/bin/TS.bin.fengge-changeUserNum-1 --VS ../../data/bin/TS.bin.fengge-changeUserNum-1 --F 20 --openmp 0 > log_dir/0_log-openmp-full_20 --verbose 1 --log rmse_dir/0_rmse-openmp-full_20
+run_all.sh: line 77: 26947 Aborted                 (core dumped) ./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum-1 --TS ../../data/bin/TS.bin.fengge-changeUserNum-1 --QS ../../data/bin/TS.bin.fengge-changeUserNum-1 --VS ../../data/bin/TS.bin.fengge-changeUserNum-1 --F 20 --openmp 0 --verbose 1 --log rmse_dir/0_rmse-openmp-full_20 > log_dir/0_log-openmp-full_20
+finished openmp 0 at:
+Mon Feb 24 03:36:59 CST 2014
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics RunDBN
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o DBN.o -c DBN.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:361: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDBN.o -c RunDBN.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDBN RunDBN.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running full-free
+starting openmp 0 at:
+Mon Feb 24 03:51:58 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.fengge-changeUserNum-1 --TS ../../data/bin/TS.bin.fengge-changeUserNum-1 --QS ../../data/bin/TS.bin.fengge-changeUserNum-1 --VS ../../data/bin/TS.bin.fengge-changeUserNum-1 --F 20 --openmp 0 > log_dir/0_log-openmp-full_20 --verbose 1 --log rmse_dir/0_rmse-openmp-full_20
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics RunDBN
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o DBN.o -c DBN.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:361: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDBN.o -c RunDBN.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o Statistics Statistics.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+mpic++ -lboost_program_options-mt -fopenmp -g -o RunDBN RunDBN.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running small
+starting openmp 1 at:
+Mon Feb 24 04:27:48 CST 2014
+mpirun -machinefile machines-single -np 4 RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 1 > log_dir/1_log-openmp-small_20 --verbose 1 --log rmse_dir/1_rmse-openmp-small_20
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 17511 on node cwan-Ubuntu exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+finished openmp 1 at:
+Mon Feb 24 05:14:59 CST 2014
+run_all_mpi.sh: 2: Syntax error: "(" unexpected
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics RunDBN
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o DBN.o -c DBN.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:361: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDBN.o -c RunDBN.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -o Statistics Statistics.o Dataset.o Misc.o -lboost_program_options-mt -fopenmp -g 
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g 
+mpic++ -o RunDBN RunDBN.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g
+g++ -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running small
+starting openmp 1 at:
+Mon Feb 24 13:40:51 CST 2014
+mpirun -machinefile machines-single -np 4 RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 1 > log_dir/1_log-openmp-small_20 --verbose 1 --log rmse_dir/1_rmse-openmp-small_20
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 19343 on node cwan-Ubuntu exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics RunDBN
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o DBN.o -c DBN.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:361: warning: unused variable ‘hs’
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:492: warning: unused variable ‘hs’
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+g++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDBN.o -c RunDBN.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -o Statistics Statistics.o Dataset.o Misc.o -lboost_program_options-mt -fopenmp -g 
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g 
+g++ -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g
+mpic++ -o RunDBN RunDBN.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g
+running small
+starting openmp 1 at:
+Mon Feb 24 13:47:25 CST 2014
+mpirun -machinefile machines -np 4 RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 1 > log_dir_mpi/1_log-openmp-small_20 --verbose 1 --log rmse_dir_mpi/1_rmse-openmp-small_20
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics RunDBN
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o DBN.o -c DBN.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:497: warning: unused variable ‘hs’
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:374: warning: unused variable ‘hs’
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDBN.o -c RunDBN.cpp
+g++ -lboost_program_options-mt -fopenmp -g -o Blending Blending.o Dataset.o Misc.o
+g++ -lboost_program_options-mt -fopenmp -g -o BlendingMajority BlendingMajority.o Dataset.o Misc.o
+g++ -o Statistics Statistics.o Dataset.o Misc.o -lboost_program_options-mt -fopenmp -g 
+g++ -lboost_program_options-mt -fopenmp -g -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+g++ -lboost_program_options-mt -fopenmp -g -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o
+RBMOpenMP.o: In function `RBMOpenMP::train(std::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)':
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:152: undefined reference to `MPI_Init'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:153: undefined reference to `ompi_mpi_comm_world'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:153: undefined reference to `MPI_Comm_rank'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:154: undefined reference to `ompi_mpi_comm_world'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:154: undefined reference to `MPI_Comm_size'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:155: undefined reference to `MPI_Get_processor_name'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:325: undefined reference to `MPI_Finalize'
+RBMOpenMP.o: In function `MPI::Datatype::Set_name(char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:398: undefined reference to `MPI_Type_set_name'
+RBMOpenMP.o: In function `MPI::Datatype::Set_attr(int, void const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:392: undefined reference to `MPI_Type_set_attr'
+RBMOpenMP.o: In function `MPI::Datatype::Get_name(char*, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:386: undefined reference to `MPI_Type_get_name'
+RBMOpenMP.o: In function `MPI::Datatype::Get_envelope(int&, int&, int&, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:380: undefined reference to `MPI_Type_get_envelope'
+RBMOpenMP.o: In function `MPI::Datatype::Get_contents(int, int, int, int*, long*, MPI::Datatype*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:366: undefined reference to `MPI_Type_get_contents'
+RBMOpenMP.o: In function `MPI::Datatype::Get_attr(int, void*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:348: undefined reference to `MPI_Type_get_attr'
+RBMOpenMP.o: In function `MPI::Datatype::Delete_attr(int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:334: undefined reference to `MPI_Type_delete_attr'
+RBMOpenMP.o: In function `MPI::Datatype::Dup() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:266: undefined reference to `MPI_Type_dup'
+RBMOpenMP.o: In function `MPI::Datatype::Create_darray(int, int, int, int const*, int const*, int const*, int const*, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:221: undefined reference to `MPI_Type_create_darray'
+RBMOpenMP.o: In function `MPI::Datatype::Create_subarray(int, int const*, int const*, int const*, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:205: undefined reference to `MPI_Type_create_subarray'
+RBMOpenMP.o: In function `MPI::Datatype::Unpack_external(char const*, void const*, long, long&, void*, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:188: undefined reference to `MPI_Unpack_external'
+RBMOpenMP.o: In function `MPI::Datatype::Pack_external_size(char const*, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:179: undefined reference to `MPI_Pack_external_size'
+RBMOpenMP.o: In function `MPI::Datatype::Pack_external(char const*, void const*, int, void*, long, long&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:172: undefined reference to `MPI_Pack_external'
+RBMOpenMP.o: In function `MPI::Datatype::Pack_size(int, MPI::Comm const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:163: undefined reference to `MPI_Pack_size'
+RBMOpenMP.o: In function `MPI::Datatype::Unpack(void const*, int, void*, int, int&, MPI::Comm const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:156: undefined reference to `MPI_Unpack'
+RBMOpenMP.o: In function `MPI::Datatype::Pack(void const*, int, void*, int, int&, MPI::Comm const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:147: undefined reference to `MPI_Pack'
+RBMOpenMP.o: In function `MPI::Datatype::Commit()':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:138: undefined reference to `MPI_Type_commit'
+RBMOpenMP.o: In function `MPI::Datatype::Get_true_extent(long&, long&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:132: undefined reference to `MPI_Type_get_true_extent'
+RBMOpenMP.o: In function `MPI::Datatype::Get_extent(long&, long&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:126: undefined reference to `MPI_Type_get_extent'
+RBMOpenMP.o: In function `MPI::Datatype::Get_size() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:119: undefined reference to `MPI_Type_size'
+RBMOpenMP.o: In function `MPI::Datatype::Create_resized(long, long) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:111: undefined reference to `MPI_Type_create_resized'
+RBMOpenMP.o: In function `MPI::Datatype::Create_indexed_block(int, int, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:102: undefined reference to `MPI_Type_create_indexed_block'
+RBMOpenMP.o: In function `MPI::Datatype::Create_hvector(int, int, long) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:91: undefined reference to `MPI_Type_create_hvector'
+RBMOpenMP.o: In function `MPI::Datatype::Create_hindexed(int, int const*, long const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:81: undefined reference to `MPI_Type_create_hindexed'
+RBMOpenMP.o: In function `MPI::Datatype::Create_indexed(int, int const*, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:52: undefined reference to `MPI_Type_indexed'
+RBMOpenMP.o: In function `MPI::Datatype::Create_vector(int, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:41: undefined reference to `MPI_Type_vector'
+RBMOpenMP.o: In function `MPI::Datatype::Create_contiguous(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:32: undefined reference to `MPI_Type_contiguous'
+RBMOpenMP.o: In function `MPI::Prequest::Start()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:296: undefined reference to `MPI_Start'
+RBMOpenMP.o: In function `MPI::Grequest::Complete()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:364: undefined reference to `MPI_Grequest_complete'
+RBMOpenMP.o: In function `MPI::Request::Get_status() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:337: undefined reference to `MPI_Request_get_status'
+RBMOpenMP.o: In function `MPI::Request::Get_status(MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:323: undefined reference to `MPI_Request_get_status'
+RBMOpenMP.o: In function `MPI::Request::Cancel() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:290: undefined reference to `MPI_Cancel'
+RBMOpenMP.o: In function `MPI::Request::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:41: undefined reference to `MPI_Request_free'
+RBMOpenMP.o: In function `MPI::Request::Test()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:56: undefined reference to `MPI_Test'
+RBMOpenMP.o: In function `MPI::Request::Test(MPI::Status&)':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:48: undefined reference to `MPI_Test'
+RBMOpenMP.o: In function `MPI::Request::Wait()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:35: undefined reference to `MPI_Wait'
+RBMOpenMP.o: In function `MPI::Request::Wait(MPI::Status&)':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:29: undefined reference to `MPI_Wait'
+RBMOpenMP.o: In function `MPI::Intercomm::Clone() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:33: undefined reference to `MPI_Comm_dup'
+RBMOpenMP.o: In function `MPI::Comm::Is_inter() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:298: undefined reference to `MPI_Comm_test_inter'
+RBMOpenMP.o: In function `MPI::Cartcomm::Map(int, int const*, bool const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:125: undefined reference to `MPI_Cart_map'
+RBMOpenMP.o: In function `MPI::Cartcomm::Get_dim() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:61: undefined reference to `MPI_Cartdim_get'
+RBMOpenMP.o: In function `MPI::Comm::Get_topology() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:518: undefined reference to `MPI_Topo_test'
+RBMOpenMP.o: In function `MPI::Cartcomm::Shift(int, int, int&, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:99: undefined reference to `MPI_Cart_shift'
+RBMOpenMP.o: In function `MPI::Cartcomm::Get_coords(int, int, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:92: undefined reference to `MPI_Cart_coords'
+RBMOpenMP.o: In function `MPI::Cartcomm::Get_cart_rank(int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:85: undefined reference to `MPI_Cart_rank'
+RBMOpenMP.o: In function `MPI::Cartcomm::Get_topo(int, int*, bool*, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:74: undefined reference to `MPI_Cart_get'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:74: undefined reference to `MPI_Cart_get'
+RBMOpenMP.o: In function `MPI::Graphcomm::Map(int, int const*, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:208: undefined reference to `MPI_Graph_map'
+RBMOpenMP.o: In function `MPI::Graphcomm::Get_neighbors(int, int, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:200: undefined reference to `MPI_Graph_neighbors'
+RBMOpenMP.o: In function `MPI::Graphcomm::Get_neighbors_count(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:192: undefined reference to `MPI_Graph_neighbors_count'
+RBMOpenMP.o: In function `MPI::Graphcomm::Get_topo(int, int, int*, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:185: undefined reference to `MPI_Graph_get'
+RBMOpenMP.o: In function `MPI::Graphcomm::Get_dims(int*, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:178: undefined reference to `MPI_Graphdims_get'
+RBMOpenMP.o: In function `MPI::Intracomm::Spawn_multiple(int, char const**, char const***, int const*, MPI::Info const*, int, int*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:227: undefined reference to `MPI_Comm_spawn_multiple'
+RBMOpenMP.o: In function `MPI::Intracomm::Spawn_multiple(int, char const**, char const***, int const*, MPI::Info const*, int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:194: undefined reference to `MPI_Comm_spawn_multiple'
+RBMOpenMP.o: In function `MPI::Intracomm::Spawn(char const*, char const**, int, MPI::Info const&, int, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:174: undefined reference to `MPI_Comm_spawn'
+RBMOpenMP.o: In function `MPI::Intracomm::Spawn(char const*, char const**, int, MPI::Info const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:161: undefined reference to `MPI_Comm_spawn'
+RBMOpenMP.o: In function `MPI::Intracomm::Connect(char const*, MPI::Info const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:148: undefined reference to `MPI_Comm_connect'
+RBMOpenMP.o: In function `MPI::Intracomm::Accept(char const*, MPI::Info const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:136: undefined reference to `MPI_Comm_accept'
+RBMOpenMP.o: In function `MPI::Intracomm::Create_graph(int, int const*, int const*, bool) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:120: undefined reference to `MPI_Graph_create'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Graphcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:147: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:148: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:152: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intracomm::Create_cart(int, int const*, bool const*, bool) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:109: undefined reference to `MPI_Cart_create'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Cartcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:29: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:30: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:34: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intracomm::Create_intercomm(int, MPI::Comm const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:95: undefined reference to `MPI_Intercomm_create'
+RBMOpenMP.o: In function `MPI::Intercomm::Split(int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:79: undefined reference to `MPI_Comm_split'
+RBMOpenMP.o: In function `MPI::Intracomm::Create(MPI::Group const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:74: undefined reference to `MPI_Comm_create'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:23: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:25: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:26: undefined reference to `MPI_Comm_test_inter'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:28: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intercomm::Create(MPI::Group const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:71: undefined reference to `MPI_Comm_create'
+RBMOpenMP.o: In function `MPI::Intracomm::Exscan(void const*, void*, int, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:50: undefined reference to `MPI_Exscan'
+RBMOpenMP.o: In function `MPI::Intracomm::Scan(void const*, void*, int, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:42: undefined reference to `MPI_Scan'
+RBMOpenMP.o: In function `MPI::Intercomm::Get_remote_group() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:50: undefined reference to `MPI_Comm_remote_group'
+RBMOpenMP.o: In function `MPI::Intercomm::Get_remote_size() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:42: undefined reference to `MPI_Comm_remote_size'
+RBMOpenMP.o: In function `MPI::Comm::Delete_attr(int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:641: undefined reference to `MPI_Attr_delete'
+RBMOpenMP.o: In function `MPI::Comm::Get_attr(int, void*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:634: undefined reference to `MPI_Attr_get'
+RBMOpenMP.o: In function `MPI::Comm::Set_attr(int, void const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:627: undefined reference to `MPI_Attr_put'
+RBMOpenMP.o: In function `MPI::Comm::Get_errhandler() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:542: undefined reference to `MPI_Comm_get_errhandler'
+RBMOpenMP.o: In function `MPI::Comm::Set_errhandler(MPI::Errhandler const&)':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:549: undefined reference to `MPI_Comm_set_errhandler'
+RBMOpenMP.o: In function `MPI::Comm::Abort(int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:529: undefined reference to `MPI_Abort'
+RBMOpenMP.o: In function `MPI::Comm::Set_name(char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:507: undefined reference to `MPI_Comm_set_name'
+RBMOpenMP.o: In function `MPI::Comm::Get_name(char*, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:501: undefined reference to `MPI_Comm_get_name'
+RBMOpenMP.o: In function `MPI::Comm::Disconnect()':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:473: undefined reference to `MPI_Comm_disconnect'
+RBMOpenMP.o: In function `MPI::Comm::Reduce_scatter(void const*, void*, int*, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:463: undefined reference to `MPI_Reduce_scatter'
+RBMOpenMP.o: In function `MPI::Comm::Allreduce(void const*, void*, int, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:453: undefined reference to `MPI_Allreduce'
+RBMOpenMP.o: In function `MPI::Comm::Reduce(void const*, void*, int, MPI::Datatype const&, MPI::Op const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:446: undefined reference to `MPI_Reduce'
+RBMOpenMP.o: In function `MPI::Comm::Alltoallw(void const*, int const*, int const*, MPI::Datatype const*, void*, int const*, int const*, MPI::Datatype const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:436: undefined reference to `MPI_Alltoallw'
+RBMOpenMP.o: In function `MPI::Comm::Alltoallv(void const*, int const*, int const*, MPI::Datatype const&, void*, int const*, int const*, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:410: undefined reference to `MPI_Alltoallv'
+RBMOpenMP.o: In function `MPI::Comm::Alltoall(void const*, int, MPI::Datatype const&, void*, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:395: undefined reference to `MPI_Alltoall'
+RBMOpenMP.o: In function `MPI::Comm::Allgatherv(void const*, int, MPI::Datatype const&, void*, int const*, int const*, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:385: undefined reference to `MPI_Allgatherv'
+RBMOpenMP.o: In function `MPI::Comm::Allgather(void const*, int, MPI::Datatype const&, void*, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:372: undefined reference to `MPI_Allgather'
+RBMOpenMP.o: In function `MPI::Comm::Scatterv(void const*, int const*, int const*, MPI::Datatype const&, void*, int, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:362: undefined reference to `MPI_Scatterv'
+RBMOpenMP.o: In function `MPI::Comm::Scatter(void const*, int, MPI::Datatype const&, void*, int, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:349: undefined reference to `MPI_Scatter'
+RBMOpenMP.o: In function `MPI::Comm::Gatherv(void const*, int, MPI::Datatype const&, void*, int const*, int const*, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:339: undefined reference to `MPI_Gatherv'
+RBMOpenMP.o: In function `MPI::Comm::Gather(void const*, int, MPI::Datatype const&, void*, int, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:327: undefined reference to `MPI_Gather'
+RBMOpenMP.o: In function `MPI::Comm::Bcast(void*, int, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:317: undefined reference to `MPI_Bcast'
+RBMOpenMP.o: In function `MPI::Comm::Barrier() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:310: undefined reference to `MPI_Barrier'
+RBMOpenMP.o: In function `MPI::Comm::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:291: undefined reference to `MPI_Comm_free'
+RBMOpenMP.o: In function `MPI::Comm::Get_rank() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:275: undefined reference to `MPI_Comm_rank'
+RBMOpenMP.o: In function `MPI::Comm::Get_size() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:267: undefined reference to `MPI_Comm_size'
+RBMOpenMP.o: In function `MPI::Comm::Get_group() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:259: undefined reference to `MPI_Comm_group'
+RBMOpenMP.o: In function `MPI::Comm::Sendrecv_replace(void*, int, MPI::Datatype const&, int, int, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:248: undefined reference to `MPI_Sendrecv_replace'
+RBMOpenMP.o: In function `MPI::Comm::Sendrecv_replace(void*, int, MPI::Datatype const&, int, int, int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:237: undefined reference to `MPI_Sendrecv_replace'
+RBMOpenMP.o: In function `MPI::Comm::Sendrecv(void const*, int, MPI::Datatype const&, int, int, void*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:226: undefined reference to `MPI_Sendrecv'
+RBMOpenMP.o: In function `MPI::Comm::Sendrecv(void const*, int, MPI::Datatype const&, int, int, void*, int, MPI::Datatype const&, int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:212: undefined reference to `MPI_Sendrecv'
+RBMOpenMP.o: In function `MPI::Comm::Recv_init(void*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:197: undefined reference to `MPI_Recv_init'
+RBMOpenMP.o: In function `MPI::Comm::Rsend_init(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:187: undefined reference to `MPI_Rsend_init'
+RBMOpenMP.o: In function `MPI::Comm::Ssend_init(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:177: undefined reference to `MPI_Ssend_init'
+RBMOpenMP.o: In function `MPI::Comm::Bsend_init(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:167: undefined reference to `MPI_Bsend_init'
+RBMOpenMP.o: In function `MPI::Comm::Send_init(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:157: undefined reference to `MPI_Send_init'
+RBMOpenMP.o: In function `MPI::Comm::Probe(int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:148: undefined reference to `MPI_Probe'
+RBMOpenMP.o: In function `MPI::Comm::Probe(int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:142: undefined reference to `MPI_Probe'
+RBMOpenMP.o: In function `MPI::Comm::Iprobe(int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:135: undefined reference to `MPI_Iprobe'
+RBMOpenMP.o: In function `MPI::Comm::Iprobe(int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:127: undefined reference to `MPI_Iprobe'
+RBMOpenMP.o: In function `MPI::Comm::Irecv(void*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:118: undefined reference to `MPI_Irecv'
+RBMOpenMP.o: In function `MPI::Comm::Irsend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:108: undefined reference to `MPI_Irsend'
+RBMOpenMP.o: In function `MPI::Comm::Issend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:98: undefined reference to `MPI_Issend'
+RBMOpenMP.o: In function `MPI::Comm::Ibsend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:88: undefined reference to `MPI_Ibsend'
+RBMOpenMP.o: In function `MPI::Comm::Isend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:78: undefined reference to `MPI_Isend'
+RBMOpenMP.o: In function `MPI::Comm::Rsend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:69: undefined reference to `MPI_Rsend'
+RBMOpenMP.o: In function `MPI::Comm::Ssend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:61: undefined reference to `MPI_Ssend'
+RBMOpenMP.o: In function `MPI::Comm::Bsend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:53: undefined reference to `MPI_Bsend'
+RBMOpenMP.o: In function `MPI::Comm::Recv(void*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:45: undefined reference to `MPI_Recv'
+RBMOpenMP.o: In function `MPI::Comm::Recv(void*, int, MPI::Datatype const&, int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:37: undefined reference to `MPI_Recv'
+RBMOpenMP.o: In function `MPI::Comm::Send(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:30: undefined reference to `MPI_Send'
+RBMOpenMP.o: In function `MPI::Group::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:127: undefined reference to `MPI_Group_free'
+RBMOpenMP.o: In function `MPI::Group::Range_excl(int, int const (*) [3]) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:120: undefined reference to `MPI_Group_range_excl'
+RBMOpenMP.o: In function `MPI::Group::Range_incl(int, int const (*) [3]) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:106: undefined reference to `MPI_Group_range_incl'
+RBMOpenMP.o: In function `MPI::Group::Excl(int, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:92: undefined reference to `MPI_Group_excl'
+RBMOpenMP.o: In function `MPI::Group::Incl(int, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:84: undefined reference to `MPI_Group_incl'
+RBMOpenMP.o: In function `MPI::Group::Get_rank() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:36: undefined reference to `MPI_Group_rank'
+RBMOpenMP.o: In function `MPI::Group::Get_size() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:28: undefined reference to `MPI_Group_size'
+RBMOpenMP.o: In function `MPI::Op::Is_commutative() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:147: undefined reference to `MPI_Op_commutative'
+RBMOpenMP.o: In function `MPI::Op::Reduce_local(void const*, void*, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:139: undefined reference to `MPI_Reduce_local'
+RBMOpenMP.o: In function `MPI::Op::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:130: undefined reference to `MPI_Op_free'
+RBMOpenMP.o: In function `MPI::Op::Init(void (*)(void const*, void*, int, MPI::Datatype const&), bool)':
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:122: undefined reference to `ompi_mpi_cxx_op_intercept'
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:122: undefined reference to `MPI_Op_create'
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:123: undefined reference to `ompi_op_set_cxx_callback'
+RBMOpenMP.o: In function `MPI::Errhandler::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/errhandler_inln.h:44: undefined reference to `MPI_Errhandler_free'
+RBMOpenMP.o: In function `MPI::Status::Set_cancelled(bool)':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:103: undefined reference to `MPI_Status_set_cancelled'
+RBMOpenMP.o: In function `MPI::Status::Set_elements(MPI::Datatype const&, int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:97: undefined reference to `MPI_Status_set_elements'
+RBMOpenMP.o: In function `MPI::Status::Get_elements(MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:45: undefined reference to `MPI_Get_elements'
+RBMOpenMP.o: In function `MPI::Status::Is_cancelled() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:37: undefined reference to `MPI_Test_cancelled'
+RBMOpenMP.o: In function `MPI::Status::Get_count(MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:29: undefined reference to `MPI_Get_count'
+RBMOpenMP.o: In function `MPI::Info::Set(char const*, char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:82: undefined reference to `MPI_Info_set'
+RBMOpenMP.o: In function `MPI::Info::Get_valuelen(char const*, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:75: undefined reference to `MPI_Info_get_valuelen'
+RBMOpenMP.o: In function `MPI::Info::Get_nthkey(int, char*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:68: undefined reference to `MPI_Info_get_nthkey'
+RBMOpenMP.o: In function `MPI::Info::Get_nkeys() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:61: undefined reference to `MPI_Info_get_nkeys'
+RBMOpenMP.o: In function `MPI::Info::Get(char const*, int, char*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:53: undefined reference to `MPI_Info_get'
+RBMOpenMP.o: In function `MPI::Info::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:46: undefined reference to `MPI_Info_free'
+RBMOpenMP.o: In function `MPI::Info::Dup() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:39: undefined reference to `MPI_Info_dup'
+RBMOpenMP.o: In function `MPI::Info::Delete(char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:32: undefined reference to `MPI_Info_delete'
+RBMOpenMP.o: In function `MPI::Win::Set_name(char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:293: undefined reference to `MPI_Win_set_name'
+RBMOpenMP.o: In function `MPI::Win::Set_attr(int, void const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:286: undefined reference to `MPI_Win_set_attr'
+RBMOpenMP.o: In function `MPI::Win::Get_name(char*, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:279: undefined reference to `MPI_Win_get_name'
+RBMOpenMP.o: In function `MPI::Win::Delete_attr(int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:244: undefined reference to `MPI_Win_delete_attr'
+RBMOpenMP.o: In function `MPI::Win::Call_errhandler(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:178: undefined reference to `MPI_Win_call_errhandler'
+RBMOpenMP.o: In function `MPI::Win::Wait() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:167: undefined reference to `MPI_Win_wait'
+RBMOpenMP.o: In function `MPI::Win::Unlock(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:160: undefined reference to `MPI_Win_unlock'
+RBMOpenMP.o: In function `MPI::Win::Test() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:151: undefined reference to `MPI_Win_test'
+RBMOpenMP.o: In function `MPI::Win::Start(MPI::Group const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:143: undefined reference to `MPI_Win_start'
+RBMOpenMP.o: In function `MPI::Win::Put(void const*, int, MPI::Datatype const&, int, long, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:135: undefined reference to `MPI_Put'
+RBMOpenMP.o: In function `MPI::Win::Post(MPI::Group const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:122: undefined reference to `MPI_Win_post'
+RBMOpenMP.o: In function `MPI::Win::Lock(int, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:115: undefined reference to `MPI_Win_lock'
+RBMOpenMP.o: In function `MPI::Win::Get_group() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:107: undefined reference to `MPI_Win_get_group'
+RBMOpenMP.o: In function `MPI::Win::Get(void const*, int, MPI::Datatype const&, int, long, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:98: undefined reference to `MPI_Get'
+RBMOpenMP.o: In function `MPI::Win::Fence(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:85: undefined reference to `MPI_Win_fence'
+RBMOpenMP.o: In function `MPI::Win::Complete() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:67: undefined reference to `MPI_Win_complete'
+RBMOpenMP.o: In function `MPI::Win::Accumulate(void const*, int, MPI::Datatype const&, int, long, int, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:59: undefined reference to `MPI_Accumulate'
+RBMOpenMP.o: In function `MPI::Win::Get_errhandler() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:33: undefined reference to `MPI_Win_get_errhandler'
+RBMOpenMP.o: In function `MPI::Win::Set_errhandler(MPI::Errhandler const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:41: undefined reference to `MPI_Win_set_errhandler'
+RBMOpenMP.o: In function `MPI::Graphcomm::Clone() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:216: undefined reference to `MPI_Comm_dup'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Graphcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:147: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:148: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:152: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Cartcomm::Sub(bool const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:106: undefined reference to `MPI_Cartdim_get'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:112: undefined reference to `MPI_Cart_sub'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Cartcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:29: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:30: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:34: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Cartcomm::Clone() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:135: undefined reference to `MPI_Comm_dup'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Cartcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:29: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:30: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:34: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intercomm::Merge(bool) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:58: undefined reference to `MPI_Intercomm_merge'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:23: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:25: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:26: undefined reference to `MPI_Comm_test_inter'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:28: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intracomm::Clone() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:65: undefined reference to `MPI_Comm_dup'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:23: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:25: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:26: undefined reference to `MPI_Comm_test_inter'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:28: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intracomm::Split(int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:82: undefined reference to `MPI_Comm_split'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:23: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:25: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:26: undefined reference to `MPI_Comm_test_inter'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:28: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o:(.rodata._ZTVN3MPI3WinE[vtable for MPI::Win]+0x48): undefined reference to `MPI::Win::Free()'
+RBMOpenMP.o:(.rodata._ZTVN3MPI8DatatypeE[vtable for MPI::Datatype]+0x78): undefined reference to `MPI::Datatype::Free()'
+collect2: ld returned 1 exit status
+make: *** [RunFrontend] Error 1
+make: *** Waiting for unfinished jobs....
+RBMOpenMP.o: In function `RBMOpenMP::train(std::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool)':
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:152: undefined reference to `MPI_Init'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:153: undefined reference to `ompi_mpi_comm_world'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:153: undefined reference to `MPI_Comm_rank'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:154: undefined reference to `ompi_mpi_comm_world'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:154: undefined reference to `MPI_Comm_size'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:155: undefined reference to `MPI_Get_processor_name'
+/home/hduser/daiwk/mpi/master-thesis/netflix/RBMOpenMP.cpp:325: undefined reference to `MPI_Finalize'
+RBMOpenMP.o: In function `MPI::Datatype::Set_name(char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:398: undefined reference to `MPI_Type_set_name'
+RBMOpenMP.o: In function `MPI::Datatype::Set_attr(int, void const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:392: undefined reference to `MPI_Type_set_attr'
+RBMOpenMP.o: In function `MPI::Datatype::Get_name(char*, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:386: undefined reference to `MPI_Type_get_name'
+RBMOpenMP.o: In function `MPI::Datatype::Get_envelope(int&, int&, int&, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:380: undefined reference to `MPI_Type_get_envelope'
+RBMOpenMP.o: In function `MPI::Datatype::Get_contents(int, int, int, int*, long*, MPI::Datatype*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:366: undefined reference to `MPI_Type_get_contents'
+RBMOpenMP.o: In function `MPI::Datatype::Get_attr(int, void*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:348: undefined reference to `MPI_Type_get_attr'
+RBMOpenMP.o: In function `MPI::Datatype::Delete_attr(int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:334: undefined reference to `MPI_Type_delete_attr'
+RBMOpenMP.o: In function `MPI::Datatype::Dup() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:266: undefined reference to `MPI_Type_dup'
+RBMOpenMP.o: In function `MPI::Datatype::Create_darray(int, int, int, int const*, int const*, int const*, int const*, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:221: undefined reference to `MPI_Type_create_darray'
+RBMOpenMP.o: In function `MPI::Datatype::Create_subarray(int, int const*, int const*, int const*, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:205: undefined reference to `MPI_Type_create_subarray'
+RBMOpenMP.o: In function `MPI::Datatype::Unpack_external(char const*, void const*, long, long&, void*, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:188: undefined reference to `MPI_Unpack_external'
+RBMOpenMP.o: In function `MPI::Datatype::Pack_external_size(char const*, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:179: undefined reference to `MPI_Pack_external_size'
+RBMOpenMP.o: In function `MPI::Datatype::Pack_external(char const*, void const*, int, void*, long, long&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:172: undefined reference to `MPI_Pack_external'
+RBMOpenMP.o: In function `MPI::Datatype::Pack_size(int, MPI::Comm const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:163: undefined reference to `MPI_Pack_size'
+RBMOpenMP.o: In function `MPI::Datatype::Unpack(void const*, int, void*, int, int&, MPI::Comm const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:156: undefined reference to `MPI_Unpack'
+RBMOpenMP.o: In function `MPI::Datatype::Pack(void const*, int, void*, int, int&, MPI::Comm const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:147: undefined reference to `MPI_Pack'
+RBMOpenMP.o: In function `MPI::Datatype::Commit()':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:138: undefined reference to `MPI_Type_commit'
+RBMOpenMP.o: In function `MPI::Datatype::Get_true_extent(long&, long&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:132: undefined reference to `MPI_Type_get_true_extent'
+RBMOpenMP.o: In function `MPI::Datatype::Get_extent(long&, long&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:126: undefined reference to `MPI_Type_get_extent'
+RBMOpenMP.o: In function `MPI::Datatype::Get_size() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:119: undefined reference to `MPI_Type_size'
+RBMOpenMP.o: In function `MPI::Datatype::Create_resized(long, long) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:111: undefined reference to `MPI_Type_create_resized'
+RBMOpenMP.o: In function `MPI::Datatype::Create_indexed_block(int, int, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:102: undefined reference to `MPI_Type_create_indexed_block'
+RBMOpenMP.o: In function `MPI::Datatype::Create_hvector(int, int, long) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:91: undefined reference to `MPI_Type_create_hvector'
+RBMOpenMP.o: In function `MPI::Datatype::Create_hindexed(int, int const*, long const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:81: undefined reference to `MPI_Type_create_hindexed'
+RBMOpenMP.o: In function `MPI::Datatype::Create_indexed(int, int const*, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:52: undefined reference to `MPI_Type_indexed'
+RBMOpenMP.o: In function `MPI::Datatype::Create_vector(int, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:41: undefined reference to `MPI_Type_vector'
+RBMOpenMP.o: In function `MPI::Datatype::Create_contiguous(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/datatype_inln.h:32: undefined reference to `MPI_Type_contiguous'
+RBMOpenMP.o: In function `MPI::Prequest::Start()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:296: undefined reference to `MPI_Start'
+RBMOpenMP.o: In function `MPI::Grequest::Complete()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:364: undefined reference to `MPI_Grequest_complete'
+RBMOpenMP.o: In function `MPI::Request::Get_status() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:337: undefined reference to `MPI_Request_get_status'
+RBMOpenMP.o: In function `MPI::Request::Get_status(MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:323: undefined reference to `MPI_Request_get_status'
+RBMOpenMP.o: In function `MPI::Request::Cancel() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:290: undefined reference to `MPI_Cancel'
+RBMOpenMP.o: In function `MPI::Request::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:41: undefined reference to `MPI_Request_free'
+RBMOpenMP.o: In function `MPI::Request::Test()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:56: undefined reference to `MPI_Test'
+RBMOpenMP.o: In function `MPI::Request::Test(MPI::Status&)':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:48: undefined reference to `MPI_Test'
+RBMOpenMP.o: In function `MPI::Request::Wait()':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:35: undefined reference to `MPI_Wait'
+RBMOpenMP.o: In function `MPI::Request::Wait(MPI::Status&)':
+/usr/local/include/openmpi/ompi/mpi/cxx/request_inln.h:29: undefined reference to `MPI_Wait'
+RBMOpenMP.o: In function `MPI::Intercomm::Clone() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:33: undefined reference to `MPI_Comm_dup'
+RBMOpenMP.o: In function `MPI::Comm::Is_inter() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:298: undefined reference to `MPI_Comm_test_inter'
+RBMOpenMP.o: In function `MPI::Cartcomm::Map(int, int const*, bool const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:125: undefined reference to `MPI_Cart_map'
+RBMOpenMP.o: In function `MPI::Cartcomm::Get_dim() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:61: undefined reference to `MPI_Cartdim_get'
+RBMOpenMP.o: In function `MPI::Comm::Get_topology() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:518: undefined reference to `MPI_Topo_test'
+RBMOpenMP.o: In function `MPI::Cartcomm::Shift(int, int, int&, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:99: undefined reference to `MPI_Cart_shift'
+RBMOpenMP.o: In function `MPI::Cartcomm::Get_coords(int, int, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:92: undefined reference to `MPI_Cart_coords'
+RBMOpenMP.o: In function `MPI::Cartcomm::Get_cart_rank(int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:85: undefined reference to `MPI_Cart_rank'
+RBMOpenMP.o: In function `MPI::Cartcomm::Get_topo(int, int*, bool*, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:74: undefined reference to `MPI_Cart_get'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:74: undefined reference to `MPI_Cart_get'
+RBMOpenMP.o: In function `MPI::Graphcomm::Map(int, int const*, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:208: undefined reference to `MPI_Graph_map'
+RBMOpenMP.o: In function `MPI::Graphcomm::Get_neighbors(int, int, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:200: undefined reference to `MPI_Graph_neighbors'
+RBMOpenMP.o: In function `MPI::Graphcomm::Get_neighbors_count(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:192: undefined reference to `MPI_Graph_neighbors_count'
+RBMOpenMP.o: In function `MPI::Graphcomm::Get_topo(int, int, int*, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:185: undefined reference to `MPI_Graph_get'
+RBMOpenMP.o: In function `MPI::Graphcomm::Get_dims(int*, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:178: undefined reference to `MPI_Graphdims_get'
+RBMOpenMP.o: In function `MPI::Intracomm::Spawn_multiple(int, char const**, char const***, int const*, MPI::Info const*, int, int*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:227: undefined reference to `MPI_Comm_spawn_multiple'
+RBMOpenMP.o: In function `MPI::Intracomm::Spawn_multiple(int, char const**, char const***, int const*, MPI::Info const*, int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:194: undefined reference to `MPI_Comm_spawn_multiple'
+RBMOpenMP.o: In function `MPI::Intracomm::Spawn(char const*, char const**, int, MPI::Info const&, int, int*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:174: undefined reference to `MPI_Comm_spawn'
+RBMOpenMP.o: In function `MPI::Intracomm::Spawn(char const*, char const**, int, MPI::Info const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:161: undefined reference to `MPI_Comm_spawn'
+RBMOpenMP.o: In function `MPI::Intracomm::Connect(char const*, MPI::Info const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:148: undefined reference to `MPI_Comm_connect'
+RBMOpenMP.o: In function `MPI::Intracomm::Accept(char const*, MPI::Info const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:136: undefined reference to `MPI_Comm_accept'
+RBMOpenMP.o: In function `MPI::Intracomm::Create_graph(int, int const*, int const*, bool) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:120: undefined reference to `MPI_Graph_create'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Graphcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:147: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:148: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:152: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intracomm::Create_cart(int, int const*, bool const*, bool) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:109: undefined reference to `MPI_Cart_create'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Cartcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:29: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:30: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:34: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intracomm::Create_intercomm(int, MPI::Comm const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:95: undefined reference to `MPI_Intercomm_create'
+RBMOpenMP.o: In function `MPI::Intercomm::Split(int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:79: undefined reference to `MPI_Comm_split'
+RBMOpenMP.o: In function `MPI::Intracomm::Create(MPI::Group const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:74: undefined reference to `MPI_Comm_create'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:23: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:25: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:26: undefined reference to `MPI_Comm_test_inter'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:28: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intercomm::Create(MPI::Group const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:71: undefined reference to `MPI_Comm_create'
+RBMOpenMP.o: In function `MPI::Intracomm::Exscan(void const*, void*, int, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:50: undefined reference to `MPI_Exscan'
+RBMOpenMP.o: In function `MPI::Intracomm::Scan(void const*, void*, int, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:42: undefined reference to `MPI_Scan'
+RBMOpenMP.o: In function `MPI::Intercomm::Get_remote_group() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:50: undefined reference to `MPI_Comm_remote_group'
+RBMOpenMP.o: In function `MPI::Intercomm::Get_remote_size() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:42: undefined reference to `MPI_Comm_remote_size'
+RBMOpenMP.o: In function `MPI::Comm::Delete_attr(int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:641: undefined reference to `MPI_Attr_delete'
+RBMOpenMP.o: In function `MPI::Comm::Get_attr(int, void*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:634: undefined reference to `MPI_Attr_get'
+RBMOpenMP.o: In function `MPI::Comm::Set_attr(int, void const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:627: undefined reference to `MPI_Attr_put'
+RBMOpenMP.o: In function `MPI::Comm::Get_errhandler() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:542: undefined reference to `MPI_Comm_get_errhandler'
+RBMOpenMP.o: In function `MPI::Comm::Set_errhandler(MPI::Errhandler const&)':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:549: undefined reference to `MPI_Comm_set_errhandler'
+RBMOpenMP.o: In function `MPI::Comm::Abort(int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:529: undefined reference to `MPI_Abort'
+RBMOpenMP.o: In function `MPI::Comm::Set_name(char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:507: undefined reference to `MPI_Comm_set_name'
+RBMOpenMP.o: In function `MPI::Comm::Get_name(char*, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:501: undefined reference to `MPI_Comm_get_name'
+RBMOpenMP.o: In function `MPI::Comm::Disconnect()':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:473: undefined reference to `MPI_Comm_disconnect'
+RBMOpenMP.o: In function `MPI::Comm::Reduce_scatter(void const*, void*, int*, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:463: undefined reference to `MPI_Reduce_scatter'
+RBMOpenMP.o: In function `MPI::Comm::Allreduce(void const*, void*, int, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:453: undefined reference to `MPI_Allreduce'
+RBMOpenMP.o: In function `MPI::Comm::Reduce(void const*, void*, int, MPI::Datatype const&, MPI::Op const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:446: undefined reference to `MPI_Reduce'
+RBMOpenMP.o: In function `MPI::Comm::Alltoallw(void const*, int const*, int const*, MPI::Datatype const*, void*, int const*, int const*, MPI::Datatype const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:436: undefined reference to `MPI_Alltoallw'
+RBMOpenMP.o: In function `MPI::Comm::Alltoallv(void const*, int const*, int const*, MPI::Datatype const&, void*, int const*, int const*, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:410: undefined reference to `MPI_Alltoallv'
+RBMOpenMP.o: In function `MPI::Comm::Alltoall(void const*, int, MPI::Datatype const&, void*, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:395: undefined reference to `MPI_Alltoall'
+RBMOpenMP.o: In function `MPI::Comm::Allgatherv(void const*, int, MPI::Datatype const&, void*, int const*, int const*, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:385: undefined reference to `MPI_Allgatherv'
+RBMOpenMP.o: In function `MPI::Comm::Allgather(void const*, int, MPI::Datatype const&, void*, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:372: undefined reference to `MPI_Allgather'
+RBMOpenMP.o: In function `MPI::Comm::Scatterv(void const*, int const*, int const*, MPI::Datatype const&, void*, int, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:362: undefined reference to `MPI_Scatterv'
+RBMOpenMP.o: In function `MPI::Comm::Scatter(void const*, int, MPI::Datatype const&, void*, int, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:349: undefined reference to `MPI_Scatter'
+RBMOpenMP.o: In function `MPI::Comm::Gatherv(void const*, int, MPI::Datatype const&, void*, int const*, int const*, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:339: undefined reference to `MPI_Gatherv'
+RBMOpenMP.o: In function `MPI::Comm::Gather(void const*, int, MPI::Datatype const&, void*, int, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:327: undefined reference to `MPI_Gather'
+RBMOpenMP.o: In function `MPI::Comm::Bcast(void*, int, MPI::Datatype const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:317: undefined reference to `MPI_Bcast'
+RBMOpenMP.o: In function `MPI::Comm::Barrier() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:310: undefined reference to `MPI_Barrier'
+RBMOpenMP.o: In function `MPI::Comm::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:291: undefined reference to `MPI_Comm_free'
+RBMOpenMP.o: In function `MPI::Comm::Get_rank() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:275: undefined reference to `MPI_Comm_rank'
+RBMOpenMP.o: In function `MPI::Comm::Get_size() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:267: undefined reference to `MPI_Comm_size'
+RBMOpenMP.o: In function `MPI::Comm::Get_group() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:259: undefined reference to `MPI_Comm_group'
+RBMOpenMP.o: In function `MPI::Comm::Sendrecv_replace(void*, int, MPI::Datatype const&, int, int, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:248: undefined reference to `MPI_Sendrecv_replace'
+RBMOpenMP.o: In function `MPI::Comm::Sendrecv_replace(void*, int, MPI::Datatype const&, int, int, int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:237: undefined reference to `MPI_Sendrecv_replace'
+RBMOpenMP.o: In function `MPI::Comm::Sendrecv(void const*, int, MPI::Datatype const&, int, int, void*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:226: undefined reference to `MPI_Sendrecv'
+RBMOpenMP.o: In function `MPI::Comm::Sendrecv(void const*, int, MPI::Datatype const&, int, int, void*, int, MPI::Datatype const&, int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:212: undefined reference to `MPI_Sendrecv'
+RBMOpenMP.o: In function `MPI::Comm::Recv_init(void*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:197: undefined reference to `MPI_Recv_init'
+RBMOpenMP.o: In function `MPI::Comm::Rsend_init(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:187: undefined reference to `MPI_Rsend_init'
+RBMOpenMP.o: In function `MPI::Comm::Ssend_init(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:177: undefined reference to `MPI_Ssend_init'
+RBMOpenMP.o: In function `MPI::Comm::Bsend_init(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:167: undefined reference to `MPI_Bsend_init'
+RBMOpenMP.o: In function `MPI::Comm::Send_init(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:157: undefined reference to `MPI_Send_init'
+RBMOpenMP.o: In function `MPI::Comm::Probe(int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:148: undefined reference to `MPI_Probe'
+RBMOpenMP.o: In function `MPI::Comm::Probe(int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:142: undefined reference to `MPI_Probe'
+RBMOpenMP.o: In function `MPI::Comm::Iprobe(int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:135: undefined reference to `MPI_Iprobe'
+RBMOpenMP.o: In function `MPI::Comm::Iprobe(int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:127: undefined reference to `MPI_Iprobe'
+RBMOpenMP.o: In function `MPI::Comm::Irecv(void*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:118: undefined reference to `MPI_Irecv'
+RBMOpenMP.o: In function `MPI::Comm::Irsend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:108: undefined reference to `MPI_Irsend'
+RBMOpenMP.o: In function `MPI::Comm::Issend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:98: undefined reference to `MPI_Issend'
+RBMOpenMP.o: In function `MPI::Comm::Ibsend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:88: undefined reference to `MPI_Ibsend'
+RBMOpenMP.o: In function `MPI::Comm::Isend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:78: undefined reference to `MPI_Isend'
+RBMOpenMP.o: In function `MPI::Comm::Rsend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:69: undefined reference to `MPI_Rsend'
+RBMOpenMP.o: In function `MPI::Comm::Ssend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:61: undefined reference to `MPI_Ssend'
+RBMOpenMP.o: In function `MPI::Comm::Bsend(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:53: undefined reference to `MPI_Bsend'
+RBMOpenMP.o: In function `MPI::Comm::Recv(void*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:45: undefined reference to `MPI_Recv'
+RBMOpenMP.o: In function `MPI::Comm::Recv(void*, int, MPI::Datatype const&, int, int, MPI::Status&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:37: undefined reference to `MPI_Recv'
+RBMOpenMP.o: In function `MPI::Comm::Send(void const*, int, MPI::Datatype const&, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/comm_inln.h:30: undefined reference to `MPI_Send'
+RBMOpenMP.o: In function `MPI::Group::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:127: undefined reference to `MPI_Group_free'
+RBMOpenMP.o: In function `MPI::Group::Range_excl(int, int const (*) [3]) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:120: undefined reference to `MPI_Group_range_excl'
+RBMOpenMP.o: In function `MPI::Group::Range_incl(int, int const (*) [3]) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:106: undefined reference to `MPI_Group_range_incl'
+RBMOpenMP.o: In function `MPI::Group::Excl(int, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:92: undefined reference to `MPI_Group_excl'
+RBMOpenMP.o: In function `MPI::Group::Incl(int, int const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:84: undefined reference to `MPI_Group_incl'
+RBMOpenMP.o: In function `MPI::Group::Get_rank() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:36: undefined reference to `MPI_Group_rank'
+RBMOpenMP.o: In function `MPI::Group::Get_size() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/group_inln.h:28: undefined reference to `MPI_Group_size'
+RBMOpenMP.o: In function `MPI::Op::Is_commutative() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:147: undefined reference to `MPI_Op_commutative'
+RBMOpenMP.o: In function `MPI::Op::Reduce_local(void const*, void*, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:139: undefined reference to `MPI_Reduce_local'
+RBMOpenMP.o: In function `MPI::Op::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:130: undefined reference to `MPI_Op_free'
+RBMOpenMP.o: In function `MPI::Op::Init(void (*)(void const*, void*, int, MPI::Datatype const&), bool)':
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:122: undefined reference to `ompi_mpi_cxx_op_intercept'
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:122: undefined reference to `MPI_Op_create'
+/usr/local/include/openmpi/ompi/mpi/cxx/op_inln.h:123: undefined reference to `ompi_op_set_cxx_callback'
+RBMOpenMP.o: In function `MPI::Errhandler::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/errhandler_inln.h:44: undefined reference to `MPI_Errhandler_free'
+RBMOpenMP.o: In function `MPI::Status::Set_cancelled(bool)':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:103: undefined reference to `MPI_Status_set_cancelled'
+RBMOpenMP.o: In function `MPI::Status::Set_elements(MPI::Datatype const&, int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:97: undefined reference to `MPI_Status_set_elements'
+RBMOpenMP.o: In function `MPI::Status::Get_elements(MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:45: undefined reference to `MPI_Get_elements'
+RBMOpenMP.o: In function `MPI::Status::Is_cancelled() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:37: undefined reference to `MPI_Test_cancelled'
+RBMOpenMP.o: In function `MPI::Status::Get_count(MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/status_inln.h:29: undefined reference to `MPI_Get_count'
+RBMOpenMP.o: In function `MPI::Info::Set(char const*, char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:82: undefined reference to `MPI_Info_set'
+RBMOpenMP.o: In function `MPI::Info::Get_valuelen(char const*, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:75: undefined reference to `MPI_Info_get_valuelen'
+RBMOpenMP.o: In function `MPI::Info::Get_nthkey(int, char*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:68: undefined reference to `MPI_Info_get_nthkey'
+RBMOpenMP.o: In function `MPI::Info::Get_nkeys() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:61: undefined reference to `MPI_Info_get_nkeys'
+RBMOpenMP.o: In function `MPI::Info::Get(char const*, int, char*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:53: undefined reference to `MPI_Info_get'
+RBMOpenMP.o: In function `MPI::Info::Free()':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:46: undefined reference to `MPI_Info_free'
+RBMOpenMP.o: In function `MPI::Info::Dup() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:39: undefined reference to `MPI_Info_dup'
+RBMOpenMP.o: In function `MPI::Info::Delete(char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/info_inln.h:32: undefined reference to `MPI_Info_delete'
+RBMOpenMP.o: In function `MPI::Win::Set_name(char const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:293: undefined reference to `MPI_Win_set_name'
+RBMOpenMP.o: In function `MPI::Win::Set_attr(int, void const*)':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:286: undefined reference to `MPI_Win_set_attr'
+RBMOpenMP.o: In function `MPI::Win::Get_name(char*, int&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:279: undefined reference to `MPI_Win_get_name'
+RBMOpenMP.o: In function `MPI::Win::Delete_attr(int)':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:244: undefined reference to `MPI_Win_delete_attr'
+RBMOpenMP.o: In function `MPI::Win::Call_errhandler(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:178: undefined reference to `MPI_Win_call_errhandler'
+RBMOpenMP.o: In function `MPI::Win::Wait() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:167: undefined reference to `MPI_Win_wait'
+RBMOpenMP.o: In function `MPI::Win::Unlock(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:160: undefined reference to `MPI_Win_unlock'
+RBMOpenMP.o: In function `MPI::Win::Test() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:151: undefined reference to `MPI_Win_test'
+RBMOpenMP.o: In function `MPI::Win::Start(MPI::Group const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:143: undefined reference to `MPI_Win_start'
+RBMOpenMP.o: In function `MPI::Win::Put(void const*, int, MPI::Datatype const&, int, long, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:135: undefined reference to `MPI_Put'
+RBMOpenMP.o: In function `MPI::Win::Post(MPI::Group const&, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:122: undefined reference to `MPI_Win_post'
+RBMOpenMP.o: In function `MPI::Win::Lock(int, int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:115: undefined reference to `MPI_Win_lock'
+RBMOpenMP.o: In function `MPI::Win::Get_group() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:107: undefined reference to `MPI_Win_get_group'
+RBMOpenMP.o: In function `MPI::Win::Get(void const*, int, MPI::Datatype const&, int, long, int, MPI::Datatype const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:98: undefined reference to `MPI_Get'
+RBMOpenMP.o: In function `MPI::Win::Fence(int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:85: undefined reference to `MPI_Win_fence'
+RBMOpenMP.o: In function `MPI::Win::Complete() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:67: undefined reference to `MPI_Win_complete'
+RBMOpenMP.o: In function `MPI::Win::Accumulate(void const*, int, MPI::Datatype const&, int, long, int, MPI::Datatype const&, MPI::Op const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:59: undefined reference to `MPI_Accumulate'
+RBMOpenMP.o: In function `MPI::Win::Get_errhandler() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:33: undefined reference to `MPI_Win_get_errhandler'
+RBMOpenMP.o: In function `MPI::Win::Set_errhandler(MPI::Errhandler const&) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/win_inln.h:41: undefined reference to `MPI_Win_set_errhandler'
+RBMOpenMP.o: In function `MPI::Graphcomm::Clone() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:216: undefined reference to `MPI_Comm_dup'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Graphcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:147: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:148: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:152: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Cartcomm::Sub(bool const*) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:106: undefined reference to `MPI_Cartdim_get'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:112: undefined reference to `MPI_Cart_sub'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Cartcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:29: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:30: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:34: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Cartcomm::Clone() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:135: undefined reference to `MPI_Comm_dup'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm.h:25: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Cartcomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:29: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:30: undefined reference to `MPI_Topo_test'
+/usr/local/include/openmpi/ompi/mpi/cxx/topology_inln.h:34: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intercomm::Merge(bool) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intercomm_inln.h:58: undefined reference to `MPI_Intercomm_merge'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:23: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:25: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:26: undefined reference to `MPI_Comm_test_inter'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:28: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intracomm::Clone() const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:65: undefined reference to `MPI_Comm_dup'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:23: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:25: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:26: undefined reference to `MPI_Comm_test_inter'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:28: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o: In function `MPI::Intracomm::Split(int, int) const':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:82: undefined reference to `MPI_Comm_split'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:23: undefined reference to `MPI::Comm::Comm()'
+RBMOpenMP.o: In function `Is_initialized':
+/usr/local/include/openmpi/ompi/mpi/cxx/functions_inln.h:142: undefined reference to `MPI_Initialized'
+RBMOpenMP.o: In function `Intracomm':
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:25: undefined reference to `ompi_mpi_comm_null'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:26: undefined reference to `MPI_Comm_test_inter'
+/usr/local/include/openmpi/ompi/mpi/cxx/intracomm_inln.h:28: undefined reference to `ompi_mpi_comm_null'
+RBMOpenMP.o:(.rodata._ZTVN3MPI3WinE[vtable for MPI::Win]+0x48): undefined reference to `MPI::Win::Free()'
+RBMOpenMP.o:(.rodata._ZTVN3MPI8DatatypeE[vtable for MPI::Datatype]+0x78): undefined reference to `MPI::Datatype::Free()'
+collect2: ld returned 1 exit status
+make: *** [RunDumb] Error 1
+mkdir: cannot create directory `rmse_dir_mpi': File exists
+mkdir: cannot create directory `log_dir_mpi': File exists
+running small
+starting openmp 1 at:
+Mon Feb 24 15:31:04 CST 2014
+mpirun -machinefile machines -np 4 RunDBN --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 1 > log_dir_mpi/1_log-openmp-small_20 --verbose 1 --log rmse_dir_mpi/1_rmse-openmp-small_20
+rm -f *.o *~ RunFrontend RunDumb RunRBM RunEnsemble Blending BlendingMajority Statistics RunDBN
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunFrontend.o -c RunFrontend.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dataset.o -c Dataset.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Dumb.o -c Dumb.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Ensemble.o -c Ensemble.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Model.o -c Model.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Misc.o -c Misc.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBM.o -c RBM.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RBMOpenMP.o -c RBMOpenMP.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o DBN.o -c DBN.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDumb.o -c RunDumb.cpp
+RBM.cpp: In member function ‘virtual double RBM::test(std::string)’:
+RBM.cpp:497: warning: unused variable ‘hs’
+RBMOpenMP.cpp: In member function ‘virtual double RBMOpenMP::test(std::string)’:
+RBMOpenMP.cpp:374: warning: unused variable ‘hs’
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunRBM.o -c RunRBM.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunEnsemble.o -c RunEnsemble.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Blending.o -c Blending.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o BlendingMajority.o -c BlendingMajority.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o Statistics.o -c Statistics.cpp
+mpic++ -Wall -ansi -pedantic -fopenmp -O3 -funroll-all-loops -g  -o RunDBN.o -c RunDBN.cpp
+mpic++ -o Blending Blending.o Dataset.o Misc.o -lboost_program_options-mt -fopenmp -g
+mpic++ -o BlendingMajority BlendingMajority.o Dataset.o Misc.o -lboost_program_options-mt -fopenmp -g
+mpic++ -o Statistics Statistics.o Dataset.o Misc.o -lboost_program_options-mt -fopenmp -g 
+mpic++ -o RunFrontend RunFrontend.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g
+mpic++ -o RunDumb RunDumb.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g
+mpic++ -o RunRBM RunRBM.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g
+mpic++ -o RunEnsemble RunEnsemble.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g 
+mpic++ -o RunDBN RunDBN.o Dataset.o Dumb.o Ensemble.o Model.o Misc.o RBM.o RBMOpenMP.o DBN.o -lboost_program_options-mt -fopenmp -g
+mkdir: cannot create directory `rmse_dir_mpi': File exists
+mkdir: cannot create directory `log_dir_mpi': File exists
+running small
+starting openmp 1 at:
+Mon Feb 24 15:35:36 CST 2014
+mpirun -machinefile machines -np 4 RunDBN --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 1 > log_dir_mpi/1_log-openmp-small_20 --verbose 1 --log rmse_dir_mpi/1_rmse-openmp-small_20
+run_all.sh: 3: Syntax error: "(" unexpected
+./run_all.sh: 3: Syntax error: "(" unexpected
+mkdir: cannot create directory `rmse_dir': File exists
+mkdir: cannot create directory `log_dir': File exists
+running small
+starting openmp 1 at:
+Mon Feb 24 16:48:18 CST 2014
+./RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 1 > log_dir/1_log-openmp-small_20 --verbose 1 --log rmse_dir/1_rmse-openmp-small_20
+./run_all.sh: line 42: 23878 Killed                  ./RunRBM --LS ../../data/bin/LS.bin.small-changeUserNum-1 --TS ../../data/bin/TS.bin.small-changeUserNum-1 --QS ../../data/bin/TS.bin.small-changeUserNum-1 --VS ../../data/bin/TS.bin.small-changeUserNum-1 --F 20 --openmp 1 --verbose 1 --log rmse_dir/1_rmse-openmp-small_20 > log_dir/1_log-openmp-small_20
+finished openmp 1 at:
+Mon Feb 24 17:29:00 CST 2014
+mpirun: killing job...
+
+mpirun: killing job...
+
+mpirun: killing job...
+
