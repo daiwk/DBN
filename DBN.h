@@ -31,7 +31,8 @@ public:
     int* layer_sizes;
     int layer_num;
     RBM_P** rbm_layers;
-    RBM* rbm_layer;
+//    RBM* rbm_layer;
+    RBMOpenMP* rbm_layer;
 
     int train_epochs;
 

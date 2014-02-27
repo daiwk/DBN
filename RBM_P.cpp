@@ -22,12 +22,14 @@
 
 
 
-RBM_P::RBM_P() : RBM() 
+// RBM_P::RBM_P() : RBM() 
+RBM_P::RBM_P() : RBMOpenMP() 
 {
 
 }
 
-RBM_P::RBM_P(string filename) : RBM(filename) 
+// RBM_P::RBM_P(string filename) : RBM(filename) 
+RBM_P::RBM_P(string filename) : RBMOpenMP(filename) 
 {
 
 }

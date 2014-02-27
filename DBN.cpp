@@ -25,13 +25,15 @@ DBN::DBN(int tr_num, int tr_size, int* l_sizes, int l_num)
     char ss[1000];
     sprintf(ss, "rbm-%d", 0);
     string rbm_name = ss;
-    RBM r = RBM();
+//    RBM r = RBM();
+    RBMOpenMP r = RBMOpenMP();
     r.setParameter("F", &l_sizes[0], sizeof(int));
     r.setParameter("epochs", &Config::RBM_P::EPOCHS, sizeof(int)); //临时这么初始化
     r.reset();
 //            cout << "r.F: "<<r.F <<endl;
     r.save(rbm_name);
-    rbm_layer = new RBM(rbm_name);
+//    rbm_layer = new RBM(rbm_name);
+    rbm_layer = new RBMOpenMP(rbm_name);
 
 
 
@@ -72,6 +74,7 @@ void DBN::train()
     rbm_layer->train();
     printf("before iterations...\n");
     printf("RMSE: %lf\n", rbm_layer->test());
+    printf("training RMSE: %lf\n", rbm_layer->test("LS"));
     printf("rbm_layer trained\n");
 
     for(int i = 0; i < layer_num - 1; i++) {
@@ -105,7 +108,8 @@ void DBN::train()
     }
 
     printf("after iterations...\n");
-    printf("RMSE: %lf\n", rbm_layer->test());
+    printf("generalization RMSE: %lf\n", rbm_layer->test());
+    printf("training RMSE: %lf\n", rbm_layer->test("LS"));
     // 可以用openmp并行
     char ss[1000];
     sprintf(ss, "rbm-%d", 0);

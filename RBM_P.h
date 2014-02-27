@@ -7,8 +7,10 @@
 
 
 #include "RBM.h"
+#include "RBMOpenMP.h"
 
-class RBM_P : public RBM {
+// class RBM_P : public RBM {
+class RBM_P : public RBMOpenMP {
 // Constructors
 public:
     RBM_P();
