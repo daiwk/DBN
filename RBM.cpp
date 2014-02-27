@@ -493,8 +493,6 @@ void RBM::train(string dataset, bool reset) {
     out_hb.write((char*) hb, F * sizeof (double));
     out_hb.close();
     
-    for(int dd = 0; dd < M * K * F; dd++)
-        printf("after train: w[%d]: %lf\n", dd, w[dd]);
  
     // Deallocate data structures
     if (vs != NULL) delete[] vs;
@@ -1018,10 +1016,12 @@ void RBM::update_vb(double* vb_acc, int* vb_count, int nth) {
     }
 
     for (int i = 0; i < M; i++) {
+
         int ik_0 = _ik(i, 0);
 
         for (int k = 0; k < K; k++) {
             int ik = ik_0 + k;
+            
 
             if (vb_count[ik] > 0) {
                 vb_acc[ik] /= vb_count[ik];
@@ -1030,6 +1030,7 @@ void RBM::update_vb(double* vb_acc, int* vb_count, int nth) {
             vb_inc[ik] *= momentum;
             vb_inc[ik] += eps_vb * vb_acc[ik];
             vb[ik] += vb_inc[ik];
+            
         }
     }
 }

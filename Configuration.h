@@ -41,11 +41,11 @@ namespace Config {
 
         /* Algorithm */
         static const bool CONDITIONAL = true;
-        static const bool OPENMP = true;// false;
+        static const bool OPENMP = true;  // false;
 
         /* Training parameters */
         static const int EPOCHS = 100;
-        static const int BATCH_SIZE = 100;
+        static const int BATCH_SIZE = 50;  // 100;
         static const int CD_STEPS = 1;
         static const double EPS_W = 0.0015;
         static const double EPS_VB = 0.0012;
@@ -72,8 +72,8 @@ namespace Config {
         static const bool OPENMP = true;// false;
 
         /* Training parameters */
-        static const int EPOCHS = 20;
-        static const int BATCH_SIZE = 100;
+        static const int EPOCHS = 10;
+        static const int BATCH_SIZE = 1;
         static const int CD_STEPS = 1;
         static const double EPS_W = 0.0015;
         static const double EPS_VB = 0.0012;
